@@ -1,7 +1,13 @@
 # uclacec-mobileapp
-UCLA CEC Mobile App
+UCLA CEC Mobile App. Cuz I was lazy, you need to do the following to run the app (assuming you've set up your mobile development environment):
+ - Navigate to to UCLACECApp folder in terminal
+ - If Android: 
+   - Connect Android device to laptop/desktop or run Android emulator
+   - run ```react-native run-android```
+ - If iOS:
+   - run ```react-native run-ios```
 
-## Android
+## Android Set-up
 1. **Download and Install Android: https://developer.android.com/studio/index.html. Make sure the following are installed:**
    - Android SDK
    - Android SDK Platform
@@ -39,8 +45,8 @@ UCLA CEC Mobile App
 
    > Please make sure you use the correct Android SDK path. You can find the actual location of the SDK in the Android Studio "Preferences" dialog, under Appearance & Behavior → System Settings → Android SDK.
 
-## iOS
-1. Install XCode (if you don't have this...smh.) 
-2. Command Line Tools 
+## iOS Setup
+1. **Install XCode (if you don't have this...smh.) **
+2. **Command Line Tools **
 
    You will also need to install the Xcode Command Line Tools. Open Xcode, then choose "Preferences..." from the Xcode menu. Go to the Locations panel and install the tools by selecting the most recent version in the Command Line Tools dropdown.
