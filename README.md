@@ -1,5 +1,29 @@
 # uclacec-mobileapp
-UCLA CEC Mobile App. Cuz I was lazy, you need to do the following to run the app (assuming you've set up your mobile development environment):
+UCLA CEC Mobile App. 
+
+## Set-up your working environment (Mac)
+1. Clone the this repository to your local machine
+```git clone https://github.com/uclacec/uclacec-mobileapp.git ```
+2. Install homebrew if you don't already have it
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+3. Install node and watchman
+```brew install node```
+```brew install watchman```
+4. Install React Native CLI
+```npm install -g react-native-cli```
+5. Install Xcode and install Command line tools
+Open Xcode, then choose "Preferences..." from the Xcode menu. Go to the Locations panel and install the tools by selecting the most recent version in the Command Line Tools dropdown.
+6. Navigate to uclacec-mobileapp
+7. Initialize your react project
+```react-native init UCLACECApp```
+8. Run your project
+```cd UCLACECApp```
+```react-native run-ios``` or ```react-native run-android```
+9. You should see your emulator pop up and display the app. You'll first see a screen that says UCLACECApp, but when it's done loading it should say "Welcome to React Native!"
+
+~Daniel's instructions~
+
+Cuz I was lazy, you need to do the following to run the app (assuming you've set up your mobile development environment):
  - Navigate to to UCLACECApp folder in terminal
  - If Android: 
    - Connect Android device to laptop/desktop or run Android emulator
