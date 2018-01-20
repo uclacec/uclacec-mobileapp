@@ -5,21 +5,23 @@ import {
   Text,
   View
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-import Events from './components/events.js';
-import Header from './components/header.js';
+import Events from './events.js';
+import Header from '../components/header.js';
 
-export default class App extends Component<{}> {
+export default class CECApp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Swiper showsButtons={false}>
+        <Swiper
+          showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
-            <Header />
+            <Header titleText="EVENTS"/>
             <Events />
           </View>
           <View>
-            <Text>hi</Text>
+            <Header titleText="MY EVENTS" />
           </View>
         </Swiper>
       </View>
