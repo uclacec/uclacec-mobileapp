@@ -7,13 +7,13 @@ import {
   FlatList
 } from 'react-native';
 import Event from '../components/singleevent.js';
-import data from '../../data.json'
 
 export default class Events extends Component {
   render() {
+    console.log(this.props.data, 'hiii')
     return (
       <FlatList
-        data={data.events} // would be from backend, not dummy data
+        data={this.props.data}
         renderItem={({item}) => (
           <Event
             type={item.type}
