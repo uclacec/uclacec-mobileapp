@@ -12,7 +12,7 @@ export default class Header extends Component {
     return (
       <View style={styles.header}>
         <TouchableOpacity>
-          <Image style={styles.logo} source={require('../assets/ceclogo.jpeg')} />
+          <Image style={styles.logo} source={require('../../assets/ceclogo.jpeg')} />
         </TouchableOpacity>
         <Text style={styles.text}> {this.props.titleText} </Text>
       </View>

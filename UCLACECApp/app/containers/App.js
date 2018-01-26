@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import CECApp from './CECApp.js';
 
-import * as reducers from '../reducers';
+import * as reducers from '../reducers/index.js';
 
 const reducer = combineReducers(reducers);
 let store = createStore(reducer)

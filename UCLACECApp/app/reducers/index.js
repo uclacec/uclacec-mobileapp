@@ -1,5 +1,5 @@
-import configureMyEvents from './configureMyEvents.js';
+import myEvents from './myEventsReducer.js';
 
 export {
-  configureMyEvents
-};
+  myEvents
+}
