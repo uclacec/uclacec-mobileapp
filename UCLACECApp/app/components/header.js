@@ -6,8 +6,15 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+//import SideBar from '../containers/sidebar.js';
 
 export default class Header extends Component {
+  // toggleDrawer = () => {
+  //       this.props.navigator.toggleDrawer({
+  //           side: 'left',
+  //           animated: true
+  //       });
+  // };
   render() {
     return (
       <View style={styles.header}>
