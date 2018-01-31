@@ -1,0 +1,49 @@
+{
+  "events": [
+    {
+      "type": "CONCERTS",
+      "title": "VULFPECK",
+      "date": "November 26 - 7:30 PM",
+      "location": "Kerckhoff Grand Salon",
+      "img": {
+        "uri": "https://preview.ibb.co/h0VUpG/vulfpeck.jpg"
+      }
+    },
+    {
+      "type": "FILMS",
+      "title": "THOR: RAGNAROK",
+      "date": "December 9 - 8:00 PM",
+      "location": "James Bridge Theater",
+      "img": {
+        "uri": "https://image.ibb.co/e0x9pG/thor.jpg"
+      }
+    },
+    {
+      "type": "SPEAKERS",
+      "title": "TIM COOK",
+      "date": "January 6 - 4:00 PM",
+      "location": "Royce Hall",
+      "img": {
+        "uri": "https://preview.ibb.co/i9Br3b/timcook.jpg"
+      }
+    },
+    {
+      "type": "CONCERTS",
+      "title": "BRUIN BASH",
+      "date": "September 25 - 8:00 PM",
+      "location": "Pauley Paviliion",
+      "img": {
+        "uri": "https://preview.ibb.co/hd8tGw/bruinbash.jpg"
+      }
+    },
+    {
+      "type": "CONCERTS",
+      "title": "NONAME",
+      "date": "November 2 - 7:00 PM",
+      "location": "Kerckhoff Grand Salon",
+      "img": {
+        "uri": "https://preview.ibb.co/nz79pG/noname.jpg"
+      }
+    }
+  ]
+}

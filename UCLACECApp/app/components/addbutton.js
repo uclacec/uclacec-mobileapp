@@ -8,12 +8,6 @@ import {
 
 
 export default class AddButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {pressed: false}
-  }
-
-
   render() {
     let accentColor;
     if (this.props.type === 'CONCERTS') {
@@ -25,8 +19,8 @@ export default class AddButton extends Component {
     }
 
     return (
-      <TouchableOpacity style={styles.button}>
-        <View >
+      <TouchableOpacity style={styles.button} onPress={this.props.handleOnClick}>
+        <View>
           <Text style={{fontFamily: 'GTPressuraMonoTrial-Regular', color: accentColor, fontSize: 20}}>+</Text>
         </View>
       </TouchableOpacity>

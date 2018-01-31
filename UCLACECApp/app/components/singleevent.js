@@ -24,14 +24,16 @@ export default class Event extends Component {
     }
 
     return (
-      <ImageBackground source={this.props.img} style={styles.image} >
+      <ImageBackground source={{"uri": this.props.img.uri}} style={styles.image} >
         <View style={styles.container}>
           <View style={styles.textContainer}>
             <Text style={styles.titleText}>{this.props.title}</Text>
             <Text style={styles.detailsText}>{this.props.date}</Text>
             <Text style={styles.detailsText}>{this.props.location}</Text>
           </View>
-          <AddButton type={this.props.type}/>
+          <AddButton
+            handleOnClick={this.props.clickEventHandler}
+            type={this.props.type}/>
           <View style={{flexDirection: 'column'}}>
             <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
             <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
