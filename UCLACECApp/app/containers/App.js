@@ -11,10 +11,6 @@ import { Platform } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import registerScreens from '../screens';
 
-registerScreens();
-
-import * as reducers from '../reducers/index.js';
-
 const reducer = combineReducers(reducers);
 let store = compose(
   // autoRehydrate()
@@ -22,6 +18,8 @@ let store = compose(
 )(createStore)(reducer);
 
 persistStore(store);
+
+registerScreens(store, Provider);
 
 Navigation.startSingleScreenApp({
     screen: {

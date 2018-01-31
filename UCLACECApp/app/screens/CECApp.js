@@ -11,7 +11,6 @@ import { addEvent } from '../actions/index.js';
 
 import { StackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-<<<<<<< HEAD:UCLACECApp/app/containers/CECApp.js
 
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
