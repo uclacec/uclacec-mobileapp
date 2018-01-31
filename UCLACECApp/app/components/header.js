@@ -6,12 +6,20 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+//import SideBar from '../containers/sidebar.js';
 
 export default class Header extends Component {
+  
+  constructor(props){
+    super(props)
+  }
+
   render() {
     return (
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={ () => this.props.onClick()}
+        >
           <Image style={styles.logo} source={require('../../assets/ceclogo.jpeg')} />
         </TouchableOpacity>
         <Text style={styles.text}> {this.props.titleText} </Text>
