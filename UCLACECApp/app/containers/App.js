@@ -30,10 +30,11 @@ Navigation.startSingleScreenApp({
         screen: 'sidebar'
       },
       style: {
-        leftDrawerWidth: 30
+        leftDrawerWidth: 20
       },
       type: 'MMDrawer',
       animationType: 'door',
+      disableOpenGesture: false
     }
 });
 

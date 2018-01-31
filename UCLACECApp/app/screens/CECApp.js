@@ -36,12 +36,7 @@ class CECApp extends Component {
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}> 
-            <Header titleText="EVENTS"/>
-            <Button 
-              onPress={this.toggleDrawer}
-              title="Roslyn"
-            >  
-            </Button> 
+            <Header titleText="EVENTS" onClick={()=>this.toggleDrawer() }/>
             <Events
               data={data.events}
               addEvent={(event) => this.props.addEventClick(event)}
