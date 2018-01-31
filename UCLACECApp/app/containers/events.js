@@ -10,7 +10,6 @@ import Event from '../components/singleevent.js';
 
 export default class Events extends Component {
   render() {
-    console.log(this.props.data, 'hiii')
     return (
       <FlatList
         data={this.props.data}
@@ -21,13 +20,14 @@ export default class Events extends Component {
             date={item.date}
             location={item.location}
             img={item.img}
-            addEventHandler={() => this.props.addEvent({
+            clickEventHandler={() => this.props.addEvent({
               type: item.type,
               title: item.title,
               date: item.date,
               location: item.location,
               img: item.img
             })}
+            removeEventHandler={() => this.props.removeEvent({ title: item.title })}
           />
         )}
         keyExtractor={item => item.title}

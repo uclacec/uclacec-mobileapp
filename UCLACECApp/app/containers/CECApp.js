@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
-  Button
+  AsyncStorage
 } from 'react-native';
 import { connect } from "react-redux";
 import { addEvent } from '../actions/index.js';
@@ -18,6 +16,7 @@ import Header from '../components/header.js';
 import data from '../../data.json'    // would be from backend
 
 class CECApp extends Component {
+
   render() {
     return (
       <View style={{flex: 1}}>

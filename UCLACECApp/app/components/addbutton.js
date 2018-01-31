@@ -20,7 +20,7 @@ export default class AddButton extends Component {
 
     return (
       <TouchableOpacity style={styles.button} onPress={this.props.handleOnClick}>
-        <View onClick={this.handleClick}>
+        <View>
           <Text style={{fontFamily: 'GTPressuraMonoTrial-Regular', color: accentColor, fontSize: 20}}>+</Text>
         </View>
       </TouchableOpacity>
