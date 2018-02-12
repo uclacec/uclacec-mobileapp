@@ -36,6 +36,7 @@
 		224331781FAC22670006676A /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2243316B1FAC22670006676A /* RobotoCondensed-LightItalic.ttf */; };
 		224331791FAC22670006676A /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2243316C1FAC22670006676A /* RobotoCondensed-Regular.ttf */; };
 		2243317A1FAC22670006676A /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2243316C1FAC22670006676A /* RobotoCondensed-Regular.ttf */; };
+		2283215120315C32000ED530 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283214F20315C06000ED530 /* libReactNativeNavigation.a */; };
 		2296628F1FD22CE2001F76A7 /* GT-Pressura-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2296628E1FD22CE2001F76A7 /* GT-Pressura-Mono-Bold.ttf */; };
 		229662901FD22CE2001F76A7 /* GT-Pressura-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2296628E1FD22CE2001F76A7 /* GT-Pressura-Mono-Bold.ttf */; };
 		229662BB1FD22D16001F76A7 /* GT-Pressura-Mono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 229662BA1FD22D16001F76A7 /* GT-Pressura-Mono-Regular.ttf */; };
@@ -141,6 +142,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
+		};
+		2283214E20315C06000ED530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
+			remoteInfo = ReactNativeNavigation;
 		};
 		229662B21FD22CE2001F76A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -332,6 +340,7 @@
 		2243316A1FAC22670006676A /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		2243316B1FAC22670006676A /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		2243316C1FAC22670006676A /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		2296628E1FD22CE2001F76A7 /* GT-Pressura-Mono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Pressura-Mono-Bold.ttf"; sourceTree = "<group>"; };
 		229662BA1FD22D16001F76A7 /* GT-Pressura-Mono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Pressura-Mono-Regular.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* UCLACECApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCLACECApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +364,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2283215120315C32000ED530 /* libReactNativeNavigation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -525,6 +535,21 @@
 			path = Roboto_Condensed;
 			sourceTree = "<group>";
 		};
+		2283212A20315C06000ED530 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2283214F20315C06000ED530 /* libReactNativeNavigation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2283215020315C32000ED530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +571,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -579,6 +605,7 @@
 				00E356EF1AD99517003FC87E /* UCLACECAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				224331651FAC22670006676A /* Fonts */,
+				2283215020315C32000ED530 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -764,6 +791,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 2283212A20315C06000ED530 /* Products */;
+					ProjectRef = 2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -851,6 +882,13 @@
 			fileType = archive.ar;
 			path = "libfishhook-tvOS.a";
 			remoteRef = 224331941FAC22670006676A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2283214F20315C06000ED530 /* libReactNativeNavigation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeNavigation.a;
+			remoteRef = 2283214E20315C06000ED530 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		229662B31FD22CE2001F76A7 /* libthird-party.a */ = {
@@ -1355,6 +1393,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1390,6 +1433,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
