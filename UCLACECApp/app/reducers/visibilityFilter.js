@@ -2,7 +2,7 @@ import data from '../../data.json';
 import * as types from '../actions/types.js';
 
 const initialState = {
-  filter: "SHOW_ALL",
+  filter: "EVENTS",
   events: data.events,
 }
 
@@ -23,10 +23,10 @@ const visibilityFilter = (state = initialState, action) => {
         return initialState;
 
       default:
-        return initialState;
+        return state;
     }
     default:
-      return initialState;
+      return state;
   }
 }
 

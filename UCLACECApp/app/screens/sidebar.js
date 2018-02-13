@@ -9,6 +9,11 @@ class SideBar extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <View style={styles.allView}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("SHOW_ALL")}>
+                        <Text style={[styles.filter]}>ALL</Text>
+                    </TouchableOpacity>
+                </View>
                 <View style={styles.concertsview}>
                     <TouchableOpacity onPress={()=>this.props.filterEvents("CONCERTS")}>
                         <Text style={[styles.filter, styles.concerts]}>CONCERTS</Text>
@@ -48,23 +53,25 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
     },
+    allView: {
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      height: 150,
+    },
     concertsview : {
         alignItems: 'center',
         justifyContent: 'center',
         height: 200,
-        //backgroundColor: 'red'
     },
     filmsview : {
         alignItems: 'center',
         justifyContent: 'center',
         height: 100,
-        //backgroundColor: 'yellow'
     },
     speakersview : {
         alignItems: 'center',
         justifyContent: 'center',
         height: 200,
-        //backgroundColor: 'blue'
     },
     filmsfilter: {
         transform: [{rotate: '270deg'}],
@@ -96,7 +103,6 @@ const styles = StyleSheet.create({
     speakers: {
         color: '#CE4EC8',
     },
-
 });
 
 

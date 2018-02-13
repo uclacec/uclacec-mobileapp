@@ -35,9 +35,9 @@ class CECApp extends Component {
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
-            <Header titleText="EVENTS" onClick={()=>this.toggleDrawer() }/>
+            <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer() }/>
             <Events
-              data={this.props.visibility}
+              data={this.props.visibility.events}
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
@@ -57,7 +57,7 @@ class CECApp extends Component {
 const mapStateToProps = state => {
   return {
     myEvents: state.myEvents,
-    visibility: state.visibilityFilter.events
+    visibility: state.visibilityFilter
   }
 }
 
