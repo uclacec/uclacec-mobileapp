@@ -1,23 +1,26 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
+import { connect } from 'react-redux'
+import { setVisibilityFilter } from '../actions/index.js';
+
 class SideBar extends React.Component {
 
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.concertsview}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("CONCERTS")}>
                         <Text style={[styles.filter, styles.concerts]}>CONCERTS</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.filmsview}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("FILMS")}>
                         <Text style={[styles.filmsfilter, styles.films]}>FILMS</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.speakersview}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("SPEAKERS")}>
                         <Text style={[styles.filter, styles.speakers]}>SPEAKERS</Text>
                     </TouchableOpacity>
                 </View>
@@ -25,6 +28,20 @@ class SideBar extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+  return {
+    myEvents: state.myEvents,
+    visibility: state.visibilityFilter.events
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    filterEvents: (filter) => dispatch(setVisibilityFilter(filter))
+  }
+}
+
 
 const styles = StyleSheet.create({
     container: {
@@ -82,4 +99,8 @@ const styles = StyleSheet.create({
 
 });
 
-export default SideBar;
+
+export default SideBar = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SideBar);

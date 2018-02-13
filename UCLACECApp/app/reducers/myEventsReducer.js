@@ -8,13 +8,12 @@ export default function myEvents(state = initialState, action) {
       const newState = [...state];
       const newEvent = action.event;
       newState.push(newEvent);
-      console.log(newState, newEvent);
       return newState;
 
     case types.REMOVE_EVENT:
       const index = state.findIndex(x => x.name === action.event.title);
       return [...state.slice(0, index), ...state.slice(index + 1)];
-      
+
     default:
       return state;
   }

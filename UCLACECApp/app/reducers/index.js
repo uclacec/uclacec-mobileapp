@@ -1,5 +1,11 @@
-import myEvents from './myEventsReducer.js';
+import { combineReducers } from 'redux';
 
-export {
-  myEvents
-}
+import myEvents from './myEventsReducer.js';
+import visibilityFilter from './visibilityFilter.js';
+
+const reducers = combineReducers({
+  myEvents,
+  visibilityFilter
+});
+
+export default reducers;

@@ -10,7 +10,6 @@ import Event from '../components/singleevent.js';
 
 export default class Events extends Component {
   render() {
-    console.log(this.props.data, 'hiii')
     return (
       <FlatList
         data={this.props.data}
