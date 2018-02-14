@@ -42,7 +42,7 @@ class CECApp extends Component {
             />
           </View>
           <View >
-            <Header titleText="MY EVENTS" onClick={()=>{}}/>
+            <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
             <Events
               data={this.props.myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}

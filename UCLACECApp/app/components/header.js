@@ -17,6 +17,7 @@ export default class Header extends Component {
     return (
       <View style={styles.header}>
         <TouchableOpacity
+          disabled={this.props.disabled}
           onPress={ () => this.props.onClick()}
         >
           <Image style={styles.logo} source={require('../../assets/ceclogo.jpeg')} />
