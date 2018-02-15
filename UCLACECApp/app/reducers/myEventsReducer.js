@@ -7,8 +7,17 @@ export default function myEvents(state = initialState, action) {
     case types.ADD_EVENT:
       const newState = [...state];
       const newEvent = action.event;
-      newState.push(newEvent);
-      return newState;
+      var includes;
+      newState.forEach((event) => {
+        if (event.title == newEvent.title) {
+          includes = true;
+        }
+      });
+      if (includes) return newState;
+      else {
+        newState.push(newEvent);
+        return newState;
+      }
 
     case types.REMOVE_EVENT:
       const index = state.findIndex(x => x.title === action.event.title);

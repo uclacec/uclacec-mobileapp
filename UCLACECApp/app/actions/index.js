@@ -13,3 +13,10 @@ export function removeEvent(event) {
     event
   };
 }
+
+export const setVisibilityFilter = filter => {
+  return {
+    type: types.SET_VISIBILITY_FILTER,
+    filter
+  };
+}

@@ -32,7 +32,8 @@ export default class Event extends Component {
             <Text style={styles.detailsText}>{this.props.location}</Text>
           </View>
           <AddButton
-            handleOnClick={this.props.clickEventHandler}
+            addOrDelete={this.props.addOrDelete}
+            handleOnClick={this.props.eventHandler}
             type={this.props.type}/>
           <View style={{flexDirection: 'column'}}>
             <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>

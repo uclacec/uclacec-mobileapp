@@ -20,14 +20,19 @@ export default class Events extends Component {
             date={item.date}
             location={item.location}
             img={item.img}
-            clickEventHandler={() => this.props.addEvent({
-              type: item.type,
-              title: item.title,
-              date: item.date,
-              location: item.location,
-              img: item.img
-            })}
-            removeEventHandler={() => this.props.removeEvent({ title: item.title })}
+            eventHandler={
+              this.props.addEvent ? () => this.props.addEvent({
+                type: item.type,
+                title: item.title,
+                date: item.date,
+                location: item.location,
+                img: item.img
+              })
+              : () => this.props.removeEvent({
+                title: item.title
+              })
+            }
+            addOrDelete={ this.props.addEvent ? "+" : "x" }
           />
         )}
         keyExtractor={item => item.title}

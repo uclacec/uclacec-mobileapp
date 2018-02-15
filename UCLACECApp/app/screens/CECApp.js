@@ -8,14 +8,13 @@ import {
 } from 'react-native';
 import { connect } from "react-redux";
 import { addEvent } from '../actions/index.js';
+import { removeEvent } from '../actions/index.js';
 
 import { StackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
-
-import data from '../../data.json'    // would be from backend
 
 class CECApp extends Component {
 
@@ -35,17 +34,17 @@ class CECApp extends Component {
       <View style={{flex: 1}}>
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
-          <View style={{flex: 1}}> 
-            <Header titleText="EVENTS" onClick={()=>this.toggleDrawer() }/>
+          <View style={{flex: 1}}>
+            <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer() }/>
             <Events
-              data={data.events}
+              data={this.props.visibility.events}
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
           <View >
-            <Header titleText="MY EVENTS" />
+            <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
             <Events
-              data={this.props.events.myEvents}
+              data={this.props.myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}
             />
           </View>
@@ -57,14 +56,15 @@ class CECApp extends Component {
 
 const mapStateToProps = state => {
   return {
-    events: state
+    myEvents: state.myEvents,
+    visibility: state.visibilityFilter
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     addEventClick: (event) => dispatch(addEvent(event)),
-    deleteEventClick: (event) => dispatch(removeEvent(event))
+    deleteEventClick: (event) => dispatch(removeEvent(event)),
   }
 }
 

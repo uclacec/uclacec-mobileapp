@@ -20,8 +20,8 @@ export default class AddButton extends Component {
 
     return (
       <TouchableOpacity style={styles.button} onPress={this.props.handleOnClick}>
-        <View>
-          <Text style={{fontFamily: 'GTPressuraMonoTrial-Regular', color: accentColor, fontSize: 20}}>+</Text>
+        <View onClick={this.handleClick}>
+          <Text style={[styles.text, {color: accentColor}]}>{this.props.addOrDelete}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -39,5 +39,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white'
+  },
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlignVertical: "center"
   }
 });

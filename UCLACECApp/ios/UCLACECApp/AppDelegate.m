@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+#import "AppDelegate.h"
+#import <React/RCTBundleURLProvider.h>
+
+
+=======
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -51,6 +57,7 @@
 // **********************************************
 // *** DON'T MISS: THE NEXT LINE IS IMPORTANT ***
 // **********************************************
+>>>>>>> master
 #import "RCCManager.h"
 
 // IMPORTANT: if you're getting an Xcode error that RCCManager.h isn't found, you've probably ran "npm install"
@@ -71,13 +78,18 @@
 #endif
   
   
+<<<<<<< HEAD
+=======
   // **********************************************
   // *** DON'T MISS: THIS IS HOW WE BOOTSTRAP *****
   // **********************************************
+>>>>>>> master
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation launchOptions:launchOptions];
   
+<<<<<<< HEAD
+=======
   /*
    // original RN bootstrap - remove this part
    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -91,6 +103,7 @@
    [self.window makeKeyAndVisible];
    */
   
+>>>>>>> master
   
   return YES;
 }

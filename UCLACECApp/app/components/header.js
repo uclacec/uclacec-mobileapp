@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 //import SideBar from '../containers/sidebar.js';
 
+
 export default class Header extends Component {
-  
   constructor(props){
     super(props)
   }
@@ -18,6 +18,7 @@ export default class Header extends Component {
     return (
       <View style={styles.header}>
         <TouchableOpacity
+          disabled={this.props.disabled}
           onPress={ () => this.props.onClick()}
         >
           <Image style={styles.logo} source={require('../../assets/ceclogo.jpeg')} />
