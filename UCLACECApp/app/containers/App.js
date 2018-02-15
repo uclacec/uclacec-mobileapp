@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { compose, createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
-import { persistReducer, persistStore } from 'redux-persist';
+import { persistReducer, persistStore, purge } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage'
 
@@ -19,9 +19,11 @@ const persistConfig = {
   storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, reducers);
-let store = compose(applyMiddleware(logger))(createStore)(persistedReducer);
-let persistor = persistStore(store);
+// const persistedReducer = persistReducer(persistConfig, reducers);
+let store = compose(applyMiddleware(logger))(createStore)(reducers);
+// let persistor = persistStore(store);
+
+// persistor.purge();
 
 registerScreens(store, Provider);
 

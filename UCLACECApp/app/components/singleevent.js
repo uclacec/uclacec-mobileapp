@@ -15,16 +15,16 @@ export default class Event extends Component {
 
   render() {
     let accentColor;
-    if (this.props.type === 'CONCERTS') {
+    if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
-    } else if (this.props.type === 'SPEAKERS') {
+    } else if (this.props.type === 'speakers') {
       accentColor = '#CE4EC8'
     } else {
       accentColor = '#FFA49F'
     }
 
     return (
-      <ImageBackground source={{"uri": this.props.img.uri}} style={styles.image} >
+      <ImageBackground source={{"uri": this.props.image.url}} style={styles.image} >
         <View style={styles.container}>
           <View style={styles.textContainer}>
             <Text style={styles.titleText}>{this.props.title}</Text>

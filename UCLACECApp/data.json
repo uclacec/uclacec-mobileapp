@@ -1,49 +1,386 @@
-{
-  "events": [
-    {
-      "type": "CONCERTS",
-      "title": "VULFPECK",
-      "date": "November 26 - 7:30 PM",
-      "location": "Kerckhoff Grand Salon",
-      "img": {
-        "uri": "https://preview.ibb.co/h0VUpG/vulfpeck.jpg"
+[
+  {
+    "_id": "5a836dc7ee2e411b8cb11885",
+    "slug": "mt-joy",
+    "title": "Mt. Joy",
+    "__v": 1,
+    "blog_link": "",
+    "date": "October 23, 2018 - 12:00 PM",
+    "description": "Mt. Joy is an Indie Folk band from Philadelphia, currently recording their first full-length album in Los Angeles, CA.\r\n\r\nMt. Joy's folk rock sound can be attributed to some of the band's biggest influences: Bob Dylan, Paul Simon, The Grateful Dead, The Beatles, and even contemporaries such as The Alabama Shakes, My Morning Jacket, and Vampire Weekend. ",
+    "event_type": "concerts",
+    "fb_link": "https://www.facebook.com/events/312645812535354/",
+    "location": "Bruin Plaza",
+    "res_link": "",
+    "time": "12:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cad12460311cedc98df",
+        "key": "concerts",
+        "name": "concerts",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/png",
+      "path": "~/images",
+      "size": 2619816,
+      "filename": "nOjzww4q8AOTMLlq.png",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/nOjzww4q8AOTMLlq.png"
     },
-    {
-      "type": "FILMS",
-      "title": "THOR: RAGNAROK",
-      "date": "December 9 - 8:00 PM",
-      "location": "James Bridge Theater",
-      "img": {
-        "uri": "https://image.ibb.co/e0x9pG/thor.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a836d7cee2e411b8cb11883",
+    "slug": "moviepass-giveaway-1",
+    "title": "MoviePass Giveaway",
+    "__v": 1,
+    "blog_link": "",
+    "date": "March 03, 2018 - 11:59 PM",
+    "description": "We're teaming up with MoviePass for one hell of a giveaway. We're giving away 12 (yes, a dozen) MoviePasses, valid for 6 months!\r\nConsider this your excuse to see all the Oscar-nominated films we're showing over the next few weeks. All you have to do is get our punchcard stamped at four upcoming screenings.\r\nTag a friend who'll be your movie buddy !!!\r\nmore details here: bit.ly/2BSjySx\r\ncec. don't pass this up.",
+    "fb_link": "https://www.facebook.com/events/1585070288213803/permalink/1593624067358425/",
+    "location": "",
+    "res_link": "bit.ly/2BSjySx",
+    "time": "11:59 pm",
+    "tags": [
+      {
+        "_id": "5a827cb812460311cedc98e3",
+        "key": "giveaway",
+        "name": "giveaway",
+        "__v": 0
+      },
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 672509,
+      "filename": "zOlvaSSgUPackq9S.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/zOlvaSSgUPackq9S.jpg"
     },
-    {
-      "type": "SPEAKERS",
-      "title": "TIM COOK",
-      "date": "January 6 - 4:00 PM",
-      "location": "Royce Hall",
-      "img": {
-        "uri": "https://preview.ibb.co/i9Br3b/timcook.jpg"
+    "state": "published",
+    "hide_title": true
+  },
+  {
+    "_id": "5a8281be8e2a48120187eff7",
+    "slug": "lady-bird",
+    "title": "Lady Bird",
+    "__v": 1,
+    "blog_link": "",
+    "date": "March 02, 2018 - 8:00 PM",
+    "description": "Lady Bird. Another Oscar film. Probably pretty good.",
+    "event_type": "films",
+    "fb_link": "",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a8280f18e2a48120187eff4",
+        "key": "oscars",
+        "name": "Oscars",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 792878,
+      "filename": "ZY-EKmsYgLmYz6CS.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/ZY-EKmsYgLmYz6CS.jpg"
     },
-    {
-      "type": "CONCERTS",
-      "title": "BRUIN BASH",
-      "date": "September 25 - 8:00 PM",
-      "location": "Pauley Paviliion",
-      "img": {
-        "uri": "https://preview.ibb.co/hd8tGw/bruinbash.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a836e85ee2e411b8cb11886",
+    "slug": "lavar-ball",
+    "title": "Lavar Ball",
+    "__v": 2,
+    "blog_link": "",
+    "date": "March 01, 2018 - 7:30 PM",
+    "description": "Are you a big baller? Come see Lavar. #BBB",
+    "event_type": "speakers",
+    "fb_link": "",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "7:30 pm",
+    "tags": [
+      {
+        "_id": "5a827cb312460311cedc98e1",
+        "key": "speakers",
+        "name": "speakers",
+        "__v": 0
+      },
+      {
+        "_id": "5a836eadee2e411b8cb11887",
+        "key": "bbb",
+        "name": "BBB",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/png",
+      "path": "~/images",
+      "size": 403488,
+      "filename": "22NWfH-e0gwtDvKw.png",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/22NWfH-e0gwtDvKw.png"
     },
-    {
-      "type": "CONCERTS",
-      "title": "NONAME",
-      "date": "November 2 - 7:00 PM",
-      "location": "Kerckhoff Grand Salon",
-      "img": {
-        "uri": "https://preview.ibb.co/nz79pG/noname.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a82818a8e2a48120187eff6",
+    "slug": "coco",
+    "title": "Coco",
+    "__v": 1,
+    "blog_link": "",
+    "date": "February 28, 2018 - 8:00 PM",
+    "description": "Coco. Apparently it's a really good Disney film. Check it out. CEC.",
+    "event_type": "films",
+    "fb_link": "",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a8280f18e2a48120187eff4",
+        "key": "oscars",
+        "name": "Oscars",
+        "__v": 0
       }
-    }
-  ]
-}
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 1580365,
+      "filename": "pFKh8qGQZSeDJJSV.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/pFKh8qGQZSeDJJSV.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a8280f88e2a48120187eff5",
+    "slug": "dunkirk",
+    "title": "Dunkirk",
+    "__v": 1,
+    "blog_link": "",
+    "date": "February 21, 2018 - 8:00 PM",
+    "description": "\"Dunkirk. World War 2. Christopher Nolan. 10/10 film\" - Ian Brault",
+    "event_type": "films",
+    "fb_link": "",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a8280f18e2a48120187eff4",
+        "key": "oscars",
+        "name": "Oscars",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 109525,
+      "filename": "Ml2P5ABmlmzL2Kxh.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/Ml2P5ABmlmzL2Kxh.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a8370abee2e411b8cb11888",
+    "slug": "get-out",
+    "title": "Get Out",
+    "__v": 1,
+    "blog_link": "",
+    "date": "February 19, 2018 - 8:00 PM",
+    "description": "Get Out. Great movie. CEC.",
+    "event_type": "films",
+    "fb_link": "",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a8280f18e2a48120187eff4",
+        "key": "oscars",
+        "name": "Oscars",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 201063,
+      "filename": "yDnX7JoLz-HFViqV.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/yDnX7JoLz-HFViqV.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a827f9e8e2a48120187eff3",
+    "slug": "loveless",
+    "title": "Loveless",
+    "__v": 1,
+    "blog_link": "",
+    "date": "February 16, 2018 - 8:00 PM",
+    "description": "WHAT: Melnitz Movies + CEC Free Sneak: Loveless\r\nWHEN: Thursday February 15 @ 8 PM\r\nWHERE: James Bridges Theatre\r\nHOW: https://goo.gl/ec47ea\r\nWATCH: https://www.youtube.com/watch?v=6h5GuecUU-Q\r\nWHY: To catch another Oscar-worthy international flick!\r\n\r\n\"The director Andrey Zvyagintsev transforms this tale of a missing child into a grim portrait of Russia today.\" - New York Times\r\n\r\nAn estranged Russian couple going through a brutal divorce both have new partners and want to start over until their 12-year-old son disappears after witnessing one of their fights.\r\n\r\n**Ticketing for reservations will begin at 7:00 PM. Reservations are ONLY VALID UNTIL 7:30 PM. After 7:30 PM, the standby line will be admitted on a first come, first served basis.**\r\n\r\n**Event is open to the public.**",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/1585070288213803/",
+    "location": "James Bridges Theater",
+    "res_link": "https://www.eventbrite.com/e/melnitz-movies-cec-free-sneak-loveless-tickets-42822303663",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a827e258e2a48120187eff2",
+        "key": "cec-free-sneak",
+        "name": "CEC Free Sneak",
+        "__v": 0
+      },
+      {
+        "_id": "5a827e1e8e2a48120187eff1",
+        "key": "melnitz-movies",
+        "name": "Melnitz Movies",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 40183,
+      "filename": "HpN9WV9-kepbzgVJ.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/HpN9WV9-kepbzgVJ.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a836d88ee2e411b8cb11884",
+    "slug": "valentine-s-day-giveaway-1",
+    "title": "Valentine's Day Giveaway",
+    "__v": 1,
+    "blog_link": "",
+    "date": "February 15, 2018 - 11:59 PM",
+    "description": "You know what's more reliable than your tinder hookup...or your ex...or Chad from SAE texting you every Thursday at 2AM? FREE sex toys - because your vibrator can't break up with you on Valentine's Day.\r\n\r\nWe're partnering with Unbound to give away a Babe Box Lite + Handcuff Bangles. Comment below the ridiculous fuccboi/fuccgirl message you've received to be entered. OR DM us screenshots if you wanna be anonymous.\r\nThe comment with the most likes wins (since we're all about letting the people decide). Giveaway details here: bit.ly/2EvS3fG\r\n\r\n***if you're shy about commenting, feel free to DM us and we'll post it for you***\r\n\r\nCEC strongly condemns any form of sexual harassment or misconduct - the aim of this submissions is to shed light at how ridiculous hookup culture in college is.\r\n\r\ncec. no strings attached.",
+    "fb_link": "https://www.facebook.com/uclacec/posts/10157209663329741",
+    "location": "",
+    "res_link": "gleam.io/yETw1/unbound-ucla",
+    "time": "11:59 pm",
+    "tags": [
+      {
+        "_id": "5a827cb812460311cedc98e3",
+        "key": "giveaway",
+        "name": "giveaway",
+        "__v": 0
+      },
+      {
+        "_id": "5a8285428e2a48120187eff9",
+        "key": "valentine-s-day",
+        "name": "Valentine's Day",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 250655,
+      "filename": "VifSeTrcHbeVkeKE.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/VifSeTrcHbeVkeKE.jpg"
+    },
+    "state": "published",
+    "hide_title": true
+  },
+  {
+    "_id": "5a827dd48e2a48120187eff0",
+    "slug": "game-night",
+    "title": "Game Night",
+    "__v": 2,
+    "blog_link": "",
+    "date": "February 14, 2018 - 8:00 PM",
+    "description": "WHAT: Melnitz Movies + CEC Free Sneak: Game Night\r\nWHEN: Tuesday February 13 @ 8 PM\r\nWHERE: James Bridges Theatre\r\nHOW: https://goo.gl/pauSkF (reservations go live at noon!) \r\nWATCH: https://www.youtube.com/watch?v=fNtLIcyjsnI\r\nWHY: Warm up to Valentine's Day with a Game Night! \r\n\r\nMax and Annie's weekly game night gets kicked up a notch when Max's brother Brooks arranges a murder mystery party -- complete with fake thugs and federal agents. So when Brooks gets kidnapped, it's all supposed to be part of the game. As the competitors set out to solve the case, they start to learn that neither the game nor Brooks are what they seem to be. The friends soon find themselves in over their heads as each twist leads to another unexpected turn over the course of one chaotic night.\r\n\r\n**Ticketing for reservations will begin at 7:00 PM. Reservations are ONLY VALID UNTIL 7:30 PM. After 7:30 PM, the standby line will be admitted on a first come, first served basis.**<\r\n\r\n**Event is open to the public.**",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/715319695522842/",
+    "location": "James Bridges Theater",
+    "res_link": "https://www.eventbrite.com/e/melnitz-movies-cec-free-sneak-game-night-tickets-42722802051",
+    "time": "8:00 pm",
+    "tags": [
+      {
+        "_id": "5a827cb012460311cedc98e0",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a827e258e2a48120187eff2",
+        "key": "cec-free-sneak",
+        "name": "CEC Free Sneak",
+        "__v": 0
+      },
+      {
+        "_id": "5a827e1e8e2a48120187eff1",
+        "key": "melnitz-movies",
+        "name": "Melnitz Movies",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "~/images",
+      "size": 730973,
+      "filename": "SSJLVedGx0okyLTy.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/home/ubuntu/new/~/images/SSJLVedGx0okyLTy.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  }
+]

@@ -10,9 +10,9 @@ import {
 export default class AddButton extends Component {
   render() {
     let accentColor;
-    if (this.props.type === 'CONCERTS') {
+    if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
-    } else if (this.props.type === 'SPEAKERS') {
+    } else if (this.props.type === 'speakers') {
       accentColor = '#CE4EC8'
     } else {
       accentColor = '#FFA49F'

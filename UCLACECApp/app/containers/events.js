@@ -7,6 +7,7 @@ import {
   FlatList
 } from 'react-native';
 import Event from '../components/singleevent.js';
+var moment = require('moment');
 
 export default class Events extends Component {
   render() {
@@ -15,18 +16,18 @@ export default class Events extends Component {
         data={this.props.data}
         renderItem={({item}) => (
           <Event
-            type={item.type}
+            type={item.event_type}
             title={item.title}
             date={item.date}
             location={item.location}
-            img={item.img}
+            image={item.image}
             eventHandler={
               this.props.addEvent ? () => this.props.addEvent({
-                type: item.type,
+                event_type: item.event_type,
                 title: item.title,
                 date: item.date,
                 location: item.location,
-                img: item.img
+                image: item.image
               })
               : () => this.props.removeEvent({
                 title: item.title
