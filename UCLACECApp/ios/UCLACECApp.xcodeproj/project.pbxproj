@@ -371,11 +371,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				2283215120315C32000ED530 /* libReactNativeNavigation.a in Frameworks */,
-=======
-				E4FDF9BD2021AA8A005E4CDC /* libReactNativeNavigation.a in Frameworks */,
->>>>>>> master
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -581,11 +577,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */,
-=======
-				E4FDF9962021AA1A005E4CDC /* ReactNativeNavigation.xcodeproj */,
->>>>>>> master
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -814,13 +806,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-<<<<<<< HEAD
 					ProductGroup = 2283212A20315C06000ED530 /* Products */;
 					ProjectRef = 2283212920315C06000ED530 /* ReactNativeNavigation.xcodeproj */;
-=======
-					ProductGroup = E4FDF9972021AA1A005E4CDC /* Products */;
-					ProjectRef = E4FDF9962021AA1A005E4CDC /* ReactNativeNavigation.xcodeproj */;
->>>>>>> master
 				},
 			);
 			projectRoot = "";
