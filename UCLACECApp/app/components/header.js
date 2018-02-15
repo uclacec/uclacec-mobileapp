@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+//import SideBar from '../containers/sidebar.js';
 
 
 export default class Header extends Component {

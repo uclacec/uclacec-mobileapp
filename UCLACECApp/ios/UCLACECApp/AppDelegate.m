@@ -1,7 +1,63 @@
+<<<<<<< HEAD
 #import "AppDelegate.h"
 #import <React/RCTBundleURLProvider.h>
 
 
+=======
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+//#import "AppDelegate.h"
+//
+//#import <React/RCTBundleURLProvider.h>
+//#import <React/RCTRootView.h>
+//
+//@implementation AppDelegate
+//
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//  NSURL *jsCodeLocation;
+//  
+//  for (NSString* family in [UIFont familyNames])
+//  {
+//    NSLog(@"%@", family);
+//    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+//    {
+//      NSLog(@" %@", name);
+//    }
+//  }
+//
+//  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+//
+//  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+//                                                      moduleName:@"UCLACECApp"
+//                                               initialProperties:nil
+//                                                   launchOptions:launchOptions];
+//  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+//
+//  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//  UIViewController *rootViewController = [UIViewController new];
+//  rootViewController.view = rootView;
+//  self.window.rootViewController = rootViewController;
+//  [self.window makeKeyAndVisible];
+//  return YES;
+//}
+//
+//@end
+
+#import "AppDelegate.h"
+#import <React/RCTBundleURLProvider.h>
+
+// **********************************************
+// *** DON'T MISS: THE NEXT LINE IS IMPORTANT ***
+// **********************************************
+>>>>>>> master
 #import "RCCManager.h"
 
 // IMPORTANT: if you're getting an Xcode error that RCCManager.h isn't found, you've probably ran "npm install"
@@ -22,10 +78,32 @@
 #endif
   
   
+<<<<<<< HEAD
+=======
+  // **********************************************
+  // *** DON'T MISS: THIS IS HOW WE BOOTSTRAP *****
+  // **********************************************
+>>>>>>> master
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation launchOptions:launchOptions];
   
+<<<<<<< HEAD
+=======
+  /*
+   // original RN bootstrap - remove this part
+   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+   moduleName:@"example"
+   initialProperties:nil
+   launchOptions:launchOptions];
+   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+   UIViewController *rootViewController = [UIViewController new];
+   rootViewController.view = rootView;
+   self.window.rootViewController = rootViewController;
+   [self.window makeKeyAndVisible];
+   */
+  
+>>>>>>> master
   
   return YES;
 }
