@@ -15,17 +15,17 @@ export default class Events extends Component {
         data={this.props.data}
         renderItem={({item}) => (
           <Event
-            type={item.type}
+            event_type={item.event_type}
             title={item.title}
             date={item.date}
             location={item.location}
-            img={item.img}
+            img={item.image}
             clickEventHandler={() => this.props.addEvent({
-              type: item.type,
+              type: item.event_type,
               title: item.title,
               date: item.date,
               location: item.location,
-              img: item.img
+              image: item.image
             })}
             removeEventHandler={() => this.props.removeEvent({ title: item.title })}
           />

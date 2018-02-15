@@ -37,7 +37,7 @@ class CECApp extends Component {
         this.setState(
           {
             isLoading: false,
-            dataSource: ds.cloneWithRows(responseJson),
+            dataSource: ds.cloneWithRows(responseJson), //responseJson is list of events
           },
           function() {
             // do something with new state
@@ -75,14 +75,8 @@ class CECApp extends Component {
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}> 
             <Header titleText="EVENTS" onClick={()=>this.toggleDrawer() }/>
-            <ListView
-              dataSource={this.state.dataSource}
-              renderRow={rowData => (
-                <Text>{rowData.title}, {rowData.event_type}</Text>
-              )}
-            />
             <Events
-              data={data.events}
+              data={data}
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
@@ -92,6 +86,14 @@ class CECApp extends Component {
               data={this.props.events.myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}
             />
+          </View>
+          <View>
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={rowData => (
+                  <Text>{rowData.title}, {rowData.event_type}</Text> //rowData is each event
+                )}
+              />
           </View>
         </Swiper>
       </View>
