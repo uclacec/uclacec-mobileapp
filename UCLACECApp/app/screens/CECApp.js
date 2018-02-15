@@ -16,7 +16,7 @@ import Swiper from 'react-native-swiper';
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
 
-import data from '../../data.json'    // would be from backend
+//import data from '../../data.json'    // would be from backend
 
 class CECApp extends Component {
 
@@ -24,6 +24,7 @@ class CECApp extends Component {
     super(props);
     this.state = {
       isLoading: true,
+      data: []
     };
   }
 
@@ -31,16 +32,10 @@ class CECApp extends Component {
     return fetch('http://52.53.224.70:3000/api/events.json')
       .then(response => response.json())
       .then(responseJson => {
-        let ds = new ListView.DataSource({
-          rowHasChanged: (r1, r2) => r1 !== r2,
-        });
         this.setState(
           {
             isLoading: false,
-            dataSource: ds.cloneWithRows(responseJson), //responseJson is list of events
-          },
-          function() {
-            // do something with new state
+            data: responseJson
           }
         );
       })
@@ -76,7 +71,7 @@ class CECApp extends Component {
           <View style={{flex: 1}}> 
             <Header titleText="EVENTS" onClick={()=>this.toggleDrawer() }/>
             <Events
-              data={data}
+              data={this.state.data}
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
@@ -86,14 +81,6 @@ class CECApp extends Component {
               data={this.props.events.myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}
             />
-          </View>
-          <View>
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={rowData => (
-                  <Text>{rowData.title}, {rowData.event_type}</Text> //rowData is each event
-                )}
-              />
           </View>
         </Swiper>
       </View>
