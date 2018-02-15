@@ -21,7 +21,7 @@ export default class Events extends Component {
             location={item.location}
             img={item.image}
             clickEventHandler={() => this.props.addEvent({
-              type: item.event_type,
+              event_type: item.event_type,
               title: item.title,
               date: item.date,
               location: item.location,
