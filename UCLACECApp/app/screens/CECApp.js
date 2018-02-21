@@ -29,7 +29,7 @@ class CECApp extends Component {
   }
 
   componentDidMount() {
-    return fetch('http://52.53.224.70:3000/api/events.json')
+    return fetch('http://52.53.224.70/api/events.json')
       .then(response => response.json())
       .then(responseJson => {
         this.setState(

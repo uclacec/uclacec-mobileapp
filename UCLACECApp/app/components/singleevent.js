@@ -28,7 +28,7 @@ export default class Event extends Component {
         <View style={styles.container}>
           <View style={styles.textContainer}>
             <Text style={styles.titleText}>{this.props.title}</Text>
-            <Text style={styles.detailsText}>{this.props.date}</Text>
+            <Text style={styles.detailsText}>{this.props.date} - {this.props.time}</Text>
             <Text style={styles.detailsText}>{this.props.location}</Text>
           </View>
           <AddButton
