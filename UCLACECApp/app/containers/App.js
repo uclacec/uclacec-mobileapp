@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { compose, createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+
+import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
 import { persistReducer, persistStore, purge } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage'
 
+import { fetchData } from '../actions/index.js';
 import reducers from '../reducers/index.js';
 import CECApp from '../screens/CECApp.js';
 
@@ -19,11 +22,9 @@ const persistConfig = {
   storage,
 }
 
-// const persistedReducer = persistReducer(persistConfig, reducers);
-let store = compose(applyMiddleware(logger))(createStore)(reducers);
-// let persistor = persistStore(store);
+let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(reducers);
 
-// persistor.purge();
+store.dispatch(fetchData());
 
 registerScreens(store, Provider);
 
@@ -48,9 +49,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
           <CECApp />
-        </PersistGate>
       </Provider>
     );
   }
