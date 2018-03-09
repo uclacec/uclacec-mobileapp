@@ -46,7 +46,7 @@ class CECApp extends Component {
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
-          <View >
+          <View style={{flex:1}}>
             <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
             <Events
               data={this.props.myEvents}

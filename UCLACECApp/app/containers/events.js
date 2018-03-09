@@ -7,7 +7,6 @@ import {
   FlatList
 } from 'react-native';
 import Event from '../components/singleevent.js';
-var moment = require('moment');
 
 export default class Events extends Component {
   render() {
