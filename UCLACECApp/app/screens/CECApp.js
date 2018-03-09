@@ -16,7 +16,12 @@ import Swiper from 'react-native-swiper';
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
 
+import SplashScreen from 'react-native-splash-screen';
+
 class CECApp extends Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
 
   toggleDrawer = () => {
         this.props.navigator.toggleDrawer({

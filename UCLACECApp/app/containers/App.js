@@ -23,7 +23,6 @@ const persistConfig = {
 }
 
 let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(reducers);
-
 store.dispatch(fetchData());
 
 registerScreens(store, Provider);
@@ -45,7 +44,13 @@ Navigation.startSingleScreenApp({
     }
 });
 
+
+
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <Provider store={store}>

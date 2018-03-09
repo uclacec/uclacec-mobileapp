@@ -5,7 +5,7 @@ initialState = {
   events: []
 };
 
-export default function events(state = initialState, action) {
+export default function loadEvents(state = initialState, action) {
   switch(action.type) {
     case types.REQUEST_DATA:
       return Object.assign({}, state, {
