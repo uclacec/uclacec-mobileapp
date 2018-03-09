@@ -14,6 +14,7 @@ export default class Event extends Component {
   }
 
   render() {
+    // get accent color
     let accentColor;
     if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
@@ -22,13 +23,26 @@ export default class Event extends Component {
     } else {
       accentColor = '#FFA49F'
     }
+    const url = "http://new.uclacec.com" + this.props.image.url;   // set url
+
+    // format date
+    date = this.props.date;
+    MM = {Jan:"January", Feb:"February", Mar:"March", Apr:"April", May:"May",
+    Jun:"June", Jul:"July", Aug:"August", Sep:"September", Oct:"October",
+    Nov:"November", Dec:"December"};
+
+    formatDate = String(new Date(date)).replace(
+    /\w{3} (\w{3}) (\d{2}) (\d{4}) (\d{2}):(\d{2}):[^(]+\(([A-Z]{3})\)/,
+    function($0,$1,$2,$3,$4,$5,$6){
+        return MM[$1]+" "+$2+", "+$3+" - "+$4%12+":"+$5+(+$4>12?"PM":"AM");
+    });
 
     return (
-      <ImageBackground source={{"uri": this.props.image.url}} style={styles.image} >
+      <ImageBackground source={{"uri": url}} style={styles.image} >
         <View style={styles.container}>
           <View style={styles.textContainer}>
             <Text style={styles.titleText}>{this.props.title}</Text>
-            <Text style={styles.detailsText}>{this.props.date}</Text>
+            <Text style={styles.detailsText}>{formatDate}</Text>
             <Text style={styles.detailsText}>{this.props.location}</Text>
           </View>
           <AddButton

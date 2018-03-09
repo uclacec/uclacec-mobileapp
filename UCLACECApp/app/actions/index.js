@@ -15,10 +15,18 @@ export function removeEvent(event) {
   };
 }
 
-export const setVisibilityFilter = filter => {
+export const setEvents = events => {
+  return {
+    type: types.SET_EVENTS,
+    events
+  };
+}
+
+export const setVisibilityFilter = (filter, events) => {
   return {
     type: types.SET_VISIBILITY_FILTER,
-    filter
+    filter,
+    events
   };
 }
 
@@ -41,6 +49,9 @@ export const fetchData = () => {
     dispatch(requestData());
     return fetch('http://new.uclacec.com/api/events.json')
     .then(data => data.json())
-    .then(events => dispatch(receiveData(events)))
+    .then(events => {
+      dispatch(receiveData(events));
+      dispatch(setEvents(events));
+    });
   }
 }
