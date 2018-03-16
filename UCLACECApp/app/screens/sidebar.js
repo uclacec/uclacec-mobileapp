@@ -10,22 +10,22 @@ class SideBar extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.allView}>
-                    <TouchableOpacity onPress={()=>this.props.filterEvents("SHOW_ALL")}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("EVENTS", this.props.allEvents)}>
                         <Text style={[styles.filter]}>ALL</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.concertsview}>
-                    <TouchableOpacity onPress={()=>this.props.filterEvents("CONCERTS")}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("CONCERTS", this.props.allEvents)}>
                         <Text style={[styles.filter, styles.concerts]}>CONCERTS</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.filmsview}>
-                    <TouchableOpacity onPress={()=>this.props.filterEvents("FILMS")}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("FILMS", this.props.allEvents)}>
                         <Text style={[styles.filmsfilter, styles.films]}>FILMS</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.speakersview}>
-                    <TouchableOpacity onPress={()=>this.props.filterEvents("SPEAKERS")}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("SPEAKERS", this.props.allEvents)}>
                         <Text style={[styles.filter, styles.speakers]}>SPEAKERS</Text>
                     </TouchableOpacity>
                 </View>
@@ -36,6 +36,7 @@ class SideBar extends React.Component {
 
 const mapStateToProps = state => {
   return {
+    allEvents: state.loadEvents.events,
     myEvents: state.myEvents,
     visibility: state.visibilityFilter.events
   }
@@ -43,7 +44,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    filterEvents: (filter) => dispatch(setVisibilityFilter(filter))
+    filterEvents: (filter, events) => dispatch(setVisibilityFilter(filter, events))
   }
 }
 

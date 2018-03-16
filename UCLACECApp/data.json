@@ -1,49 +1,341 @@
-{
-  "events": [
-    {
-      "type": "CONCERTS",
-      "title": "VULFPECK",
-      "date": "November 26 - 7:30 PM",
-      "location": "Kerckhoff Grand Salon",
-      "img": {
-        "uri": "https://preview.ibb.co/h0VUpG/vulfpeck.jpg"
+// 20180301190517
+// http://new.uclacec.com/api/events.json
+
+[
+  {
+    "_id": "5a9665efe859845952684865",
+    "slug": "moviepass-giveaway",
+    "title": "MoviePass Giveaway",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-03-07T00:00:00.000Z",
+    "description": "We’re teaming up with MoviePass for one hell of a giveaway. We’re giving away 12 (yes, a dozen) MoviePasses, valid for 6 months! Consider this your excuse to see all the Oscar-nominated films we’re showing over the next few weeks. All you have to do is get our punchcard stamped at four upcoming screenings. Tag a friend who’ll be your movie buddy!\r\ncec. don’t pass this up.",
+    "event_type": "giveaways",
+    "fb_link": "",
+    "location": "",
+    "res_link": "bit.ly/2BSjySx",
+    "time": "12 am",
+    "trailer": "",
+    "tags": [
+      {
+        "_id": "5a966667e859845952684866",
+        "key": "giveaways",
+        "name": "giveaways",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 672509,
+      "filename": "3UWaUArJgOuUaKXt.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/3UWaUArJgOuUaKXt.jpg"
     },
-    {
-      "type": "FILMS",
-      "title": "THOR: RAGNAROK",
-      "date": "December 9 - 8:00 PM",
-      "location": "James Bridge Theater",
-      "img": {
-        "uri": "https://image.ibb.co/e0x9pG/thor.jpg"
+    "state": "published",
+    "hide_title": true
+  },
+  {
+    "_id": "5a9660e5e859845952684863",
+    "slug": "flower",
+    "title": "Flower",
+    "__v": 2,
+    "blog_link": "",
+    "date": "2018-03-06T00:00:00.000Z",
+    "description": "Rebellious, quick-witted Erica Vandross is a 17-year-old firecracker living with her single mom, Laurie, and her mom's new boyfriend, Bob, in L.A.'s San Fernando Valley. When Bob's mentally unbalanced son, Luke, arrives from rehab to live with the family, Erica finds her domestic and personal life overwhelmed. With Luke and her sidekicks Kala and Claudine in tow, Erica acts out by exposing a high school teacher's dark secret.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/199543930785104/",
+    "location": "James Bridges Theater",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=up8Chk8J4I4",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      },
+      {
+        "_id": "5a9665a7e859845952684864",
+        "key": "q-and-a",
+        "name": "q&a",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 226775,
+      "filename": "vw8ukoVtJb_IMk_k.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/vw8ukoVtJb_IMk_k.jpg"
     },
-    {
-      "type": "SPEAKERS",
-      "title": "TIM COOK",
-      "date": "January 6 - 4:00 PM",
-      "location": "Royce Hall",
-      "img": {
-        "uri": "https://preview.ibb.co/i9Br3b/timcook.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660e3e859845952684862",
+    "slug": "lady-bird",
+    "title": "Lady Bird",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-03-02T00:00:00.000Z",
+    "description": "An outspoken teen must navigate a loving but turbulent relationship with her strong-willed mother over the course of an eventful and poignant senior year of high school.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/435115700279323/",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=cNi_HC839Wo",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 792878,
+      "filename": "Dvz5Hm2c0JZpGI09.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/Dvz5Hm2c0JZpGI09.jpg"
     },
-    {
-      "type": "CONCERTS",
-      "title": "BRUIN BASH",
-      "date": "September 25 - 8:00 PM",
-      "location": "Pauley Paviliion",
-      "img": {
-        "uri": "https://preview.ibb.co/hd8tGw/bruinbash.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660dfe859845952684861",
+    "slug": "coco",
+    "title": "Coco",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-03-01T00:00:00.000Z",
+    "description": "Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/233784187165139/",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=Rvr68u6k5sI",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
       }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 1580365,
+      "filename": "woe93VciC7mCgliC.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/woe93VciC7mCgliC.jpg"
     },
-    {
-      "type": "CONCERTS",
-      "title": "NONAME",
-      "date": "November 2 - 7:00 PM",
-      "location": "Kerckhoff Grand Salon",
-      "img": {
-        "uri": "https://preview.ibb.co/nz79pG/noname.jpg"
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660d9e859845952684860",
+    "slug": "dunkirk",
+    "title": "Dunkirk",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-02-21T00:00:00.000Z",
+    "description": "In May 1940, Germany advanced into France, trapping Allied troops on the beaches of Dunkirk. Under air and ground cover from British and French forces, troops were slowly and methodically evacuated from the beach using every serviceable naval and civilian vessel that could be found. At the end of this heroic mission, 330,000 French, British, Belgian and Dutch soldiers were safely evacuated.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/221290875112317/",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=F-eMt3SrfFU",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
       }
-    }
-  ]
-}
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 109525,
+      "filename": "fPjrnuFg0CihwkZf.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/fPjrnuFg0CihwkZf.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660cbe85984595268485f",
+    "slug": "loveless",
+    "title": "Loveless",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-02-16T00:00:00.000Z",
+    "description": "An estranged Russian couple going through a brutal divorce both have new partners and want to start over until their 12-year-old son disappears after witnessing one of their fights.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/1585070288213803/",
+    "location": "James Bridges Theater",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=6h5GuecUU-Q",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 40183,
+      "filename": "wJfTuDviCyANlIEe.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/wJfTuDviCyANlIEe.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a96667ae859845952684867",
+    "slug": "valentine-s-day-giveaway",
+    "title": "Valentine's Day Giveaway",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-02-15T00:00:00.000Z",
+    "description": "You know what’s more reliable than your tinder hookup...or your ex...or Chad from SAE texting you every Thursday at 2AM? FREE sex toys - because your vibrator can’t break up with you on Valentine’s Day. We’re partnering with Unbound to give away a Babe Box Lite + Handcuff Bangles. Comment below the ridiculous fuccboi/fuccgirl message you’ve received to be entered. OR DM us screenshots if you wanna be anonymous. The comment with the most likes wins (since we’re all about letting the people decide). \r\n***if you’re shy about commenting, feel free to DM us and we’ll post it for you***\r\nCEC strongly condemns any form of sexual harassment or misconduct - the aim of this submissions is to shed light at how ridiculous hookup culture in college is.\r\ncec. no strings attached.",
+    "event_type": "giveaways",
+    "fb_link": "",
+    "location": "",
+    "res_link": "bit.ly/2EvS3fG",
+    "time": "12 am",
+    "trailer": "",
+    "tags": [
+      {
+        "_id": "5a966667e859845952684866",
+        "key": "giveaways",
+        "name": "giveaways",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 250655,
+      "filename": "0n9_DdijdSMirYRV.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/0n9_DdijdSMirYRV.jpg"
+    },
+    "state": "published",
+    "hide_title": true
+  },
+  {
+    "_id": "5a9660c9e85984595268485e",
+    "slug": "game-night",
+    "title": "Game Night",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-02-14T00:00:00.000Z",
+    "description": "Max and Annie's weekly game night gets kicked up a notch when Max's brother Brooks arranges a murder mystery party -- complete with fake thugs and federal agents. So when Brooks gets kidnapped, it's all supposed to be part of the game. As the competitors set out to solve the case, they start to learn that neither the game nor Brooks are what they seem to be. The friends soon find themselves in over their heads as each twist leads to another unexpected turn over the course of one chaotic night.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/715319695522842/",
+    "location": "James Bridges Theater",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=qmxMAdV6s4U",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 730973,
+      "filename": "WCnB5o0SigJ97QO9.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/WCnB5o0SigJ97QO9.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660c6e85984595268485d",
+    "slug": "a-fantastic-woman",
+    "title": "A Fantastic Woman",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-01-31T00:00:00.000Z",
+    "description": "A transgender singer faces scorn and discrimination after the sudden death of her older boyfriend.",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/1981195215244581/",
+    "location": "James Bridges Theater",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=2V6OZzrKklM",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 130111,
+      "filename": "TO26B1WmHRIrlNfi.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/TO26B1WmHRIrlNfi.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  },
+  {
+    "_id": "5a9660bae85984595268485c",
+    "slug": "loving-vincent",
+    "title": "Loving Vincent",
+    "__v": 1,
+    "blog_link": "",
+    "date": "2018-01-19T00:00:00.000Z",
+    "description": "In a story depicted in oil painted animation, a young man comes to the last hometown of painter Vincent van Gogh to deliver the troubled artist's final letter and ends up investigating his final days there. ",
+    "event_type": "films",
+    "fb_link": "https://www.facebook.com/events/165772177383142/",
+    "location": "Ackerman Grand Ballroom",
+    "res_link": "",
+    "time": "8 pm",
+    "trailer": "https://www.youtube.com/watch?v=CGzKnyhYDQI",
+    "tags": [
+      {
+        "_id": "5a96609fe85984595268485a",
+        "key": "films",
+        "name": "films",
+        "__v": 0
+      }
+    ],
+    "image": {
+      "mimetype": "image/jpeg",
+      "path": "/images/events",
+      "size": 213027,
+      "filename": "bY8tzjxI2wxmjeUn.jpg",
+      "bucket": "uclacec-bucket",
+      "url": "https://uclacec-bucket.s3.amazonaws.com/images/events/bY8tzjxI2wxmjeUn.jpg"
+    },
+    "state": "published",
+    "hide_title": false
+  }
+]

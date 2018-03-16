@@ -16,7 +16,12 @@ import Swiper from 'react-native-swiper';
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
 
+import SplashScreen from 'react-native-splash-screen';
+
 class CECApp extends Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
 
   toggleDrawer = () => {
         this.props.navigator.toggleDrawer({
@@ -41,7 +46,7 @@ class CECApp extends Component {
               addEvent={(event) => this.props.addEventClick(event)}
             />
           </View>
-          <View >
+          <View style={{flex:1}}>
             <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
             <Events
               data={this.props.myEvents}
