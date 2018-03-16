@@ -10,7 +10,7 @@ class SideBar extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.allView}>
-                    <TouchableOpacity onPress={()=>this.props.filterEvents("SHOW_ALL")}>
+                    <TouchableOpacity onPress={()=>this.props.filterEvents("EVENTS", this.props.allEvents)}>
                         <Text style={[styles.filter]}>ALL</Text>
                     </TouchableOpacity>
                 </View>

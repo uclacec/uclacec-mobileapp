@@ -20,8 +20,8 @@ const visibilityFilter = (state = initialState, action) => {
       case 'FILMS':
         let films = action.events.filter((event) => (event.event_type == 'films'));
         return Object.assign({ filter: "FILMS" }, { events: films });;
-      case 'SHOW_ALL':
-        return initialState;
+      case 'EVENTS':
+        return Object.assign({ filter: "EVENTS" }, { events: action.events });
 
       default:
         return state;
