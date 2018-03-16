@@ -4,14 +4,35 @@ import {
   StyleSheet,
   Text,
   View,
-  ImageBackground
+  ImageBackground,
+  TouchableOpacity
 } from 'react-native';
 import AddButton from './addbutton.js';
+import Modal from 'react-native-modal';
 
 export default class Event extends Component {
   constructor(props) {
     super(props);
   }
+
+  state = {
+    visibleModal: null,
+  };
+
+ _renderButton = (text, onPress) => (
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.button}>
+        <Text>{text}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+
+  _renderModalContent = () => (
+    <View style={styles.modalContent}>
+      <Text>Hello!</Text>
+      {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+    </View>
+  );
 
   render() {
     // get accent color
@@ -38,23 +59,32 @@ export default class Event extends Component {
     });
 
     return (
-      <ImageBackground source={{"uri": url}} style={styles.image} >
-        <View style={styles.container}>
-          <View style={styles.textContainer}>
-            <Text style={styles.titleText}>{this.props.title}</Text>
-            <Text style={styles.detailsText}>{formatDate}</Text>
-            <Text style={styles.detailsText}>{this.props.location}</Text>
-          </View>
-          <AddButton
-            addOrDelete={this.props.addOrDelete}
-            handleOnClick={this.props.eventHandler}
-            type={this.props.type}/>
-          <View style={{flexDirection: 'column'}}>
-            <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
-            <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
-          </View>
-        </View>
-      </ImageBackground>
+      <View>
+        <TouchableOpacity 
+          onPress={ () => this.setState({ visibleModal: 1 })}
+        >
+          <ImageBackground source={{"uri": url}} style={styles.image} >
+            <View style={styles.container}>
+              <View style={styles.textContainer}>
+                <Text style={styles.titleText}>{this.props.title}</Text>
+                <Text style={styles.detailsText}>{formatDate}</Text>
+                <Text style={styles.detailsText}>{this.props.location}</Text>
+              </View>
+              <AddButton
+                addOrDelete={this.props.addOrDelete}
+                handleOnClick={this.props.eventHandler}
+                type={this.props.type}/>
+              <View style={{flexDirection: 'column'}}>
+                <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
+                <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
+              </View>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
+        <Modal isVisible={this.state.visibleModal === 1}>
+            {this._renderModalContent()}
+        </Modal>
+      </View>
     );
   }
 }
@@ -88,6 +118,14 @@ const styles = StyleSheet.create({
   sideAccent: {
     height: 138,
     width: 10,
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 22,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    borderColor: 'rgba(0, 0, 0, 0.1)',
   },
   sideAccentCorner: {
     width: 0,
