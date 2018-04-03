@@ -47,7 +47,7 @@ export const receiveData = (data) => {
 export const fetchData = () => {
   return (dispatch) => {
     dispatch(requestData());
-    return fetch('http://new.uclacec.com/api/events.json')
+    return fetch('http://uclacec.com/api/events.json')
     .then(data => data.json())
     .then(events => {
       dispatch(receiveData(events));

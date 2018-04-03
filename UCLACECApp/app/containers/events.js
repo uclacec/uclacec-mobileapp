@@ -17,6 +17,7 @@ export default class Events extends Component {
           <Event
             type={item.event_type}
             title={item.title}
+            description={item.description}
             date={item.date}
             location={item.location}
             image={item.image}

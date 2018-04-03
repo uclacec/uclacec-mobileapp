@@ -5,7 +5,8 @@ import {
   Text,
   View,
   ImageBackground,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import AddButton from './addbutton.js';
 import Modal from 'react-native-modal';
@@ -19,18 +20,33 @@ export default class Event extends Component {
     visibleModal: null,
   };
 
- _renderButton = (text, onPress) => (
+ _renderButton = (onPress) => (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text>{text}</Text>
+        <Text>X</Text>
       </View>
     </TouchableOpacity>
   );
 
-  _renderModalContent = () => (
-    <View style={styles.modalContent}>
-      <Text>Hello!</Text>
-      {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+  _renderModalContent = (accentColor) => (
+    <View style={[styles.modalContent, {borderColor: accentColor}]}>
+      <View style={styles.titleContent}>
+        <Text style={styles.modaltitleText}>{this.props.title}</Text>
+      </View>
+      <ScrollView style={{height: 250}}>
+        <Text>{this.props.description}</Text>
+      </ScrollView>
+      <View style={styles.buttonPlacement}>
+        {this._renderButton(() => this.setState({ visibleModal: null }))}
+      </View>
+      <View style={{flex: 1, flexDirection: 'row'}}>
+        <TouchableOpacity style={styles.outButton}>
+          <Text style={{fontWeight: 'bold'}}>open in FB</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.outButton, {borderColor: grayedOut}]}>
+          <Text style={{fontWeight: 'bold', color: grayedOut}}>Trailer</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 
@@ -39,10 +55,13 @@ export default class Event extends Component {
     let accentColor;
     if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
+      grayedOut = 'gray'
     } else if (this.props.type === 'speakers') {
       accentColor = '#CE4EC8'
+      grayedOut = 'gray'
     } else {
       accentColor = '#FFA49F'
+      grayedOut = 'black'
     }
     const url = "http://new.uclacec.com" + this.props.image.url;   // set url
 
@@ -82,7 +101,7 @@ export default class Event extends Component {
           </ImageBackground>
         </TouchableOpacity>
         <Modal isVisible={this.state.visibleModal === 1}>
-            {this._renderModalContent()}
+            {this._renderModalContent(accentColor)}
         </Modal>
       </View>
     );
@@ -110,6 +129,11 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontFamily: 'GTPressuraMonoTrial-Bold'
   },
+  modaltitleText: {
+    color: 'black',
+    fontSize: 28,
+    fontFamily: 'GTPressuraMonoTrial-Bold'
+  },
   detailsText: {
     color: 'white',
     fontSize: 15,
@@ -120,12 +144,42 @@ const styles = StyleSheet.create({
     width: 10,
   },
   modalContent: {
+    height: 450,
     backgroundColor: 'white',
     padding: 22,
     justifyContent: 'center',
+    alignItems: 'flex-start',
+    borderWidth: 5,
+  },
+  titleContent: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    marginTop: 10
+  },
+  button: {
+    padding: 10,
+    justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 4,
-    borderColor: 'rgba(0, 0, 0, 0.1)',
+    height: 35,
+    width: 35,
+    borderRadius: 50,
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  buttonPlacement: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+  },
+  outButton: {
+    flex: 1,
+    height: 40,
+    padding: 10,
+    margin: 7,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderRadius: 2,
+    borderColor: 'black',
   },
   sideAccentCorner: {
     width: 0,
