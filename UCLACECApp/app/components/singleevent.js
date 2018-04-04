@@ -30,16 +30,16 @@ export default class Event extends Component {
 
   _renderModalContent = (accentColor) => (
     <View style={[styles.modalContent, {borderColor: accentColor}]}>
-      <View style={styles.titleContent}>
-        <Text style={styles.modaltitleText}>{this.props.title}</Text>
-      </View>
-      <ScrollView style={{height: 250}}>
-        <Text>{this.props.description}</Text>
-      </ScrollView>
       <View style={styles.buttonPlacement}>
         {this._renderButton(() => this.setState({ visibleModal: null }))}
       </View>
-      <View style={{flex: 1, flexDirection: 'row'}}>
+      <View style={styles.titleContent}>
+        <Text style={styles.modaltitleText}>{this.props.title}</Text>
+      </View>
+      <ScrollView style={{height: 200, marginBottom: 10}}>
+        <Text>{this.props.description}</Text>
+      </ScrollView>
+      <View style={{ flexDirection: 'row'}}>
         <TouchableOpacity style={styles.outButton}>
           <Text style={{fontWeight: 'bold'}}>open in FB</Text>
         </TouchableOpacity>
