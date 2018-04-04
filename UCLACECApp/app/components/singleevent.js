@@ -23,7 +23,7 @@ export default class Event extends Component {
  _renderButton = (onPress) => (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text>X</Text>
+        <Text style={{fontWeight: 'bold', fontSize: 20}}>&#x2715;</Text>
       </View>
     </TouchableOpacity>
   );
@@ -162,8 +162,6 @@ const styles = StyleSheet.create({
     height: 35,
     width: 35,
     borderRadius: 50,
-    borderColor: 'black',
-    borderWidth: 1
   },
   buttonPlacement: {
     position: 'absolute',
