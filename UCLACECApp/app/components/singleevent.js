@@ -6,7 +6,8 @@ import {
   View,
   ImageBackground,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  Linking
 } from 'react-native';
 import AddButton from './addbutton.js';
 import Modal from 'react-native-modal';
@@ -28,7 +29,7 @@ export default class Event extends Component {
     </TouchableOpacity>
   );
 
-  _renderModalContent = (accentColor) => (
+  _renderModalContent = (accentColor, fburl, trailerurl) => (
     <View style={[styles.modalContent, {borderColor: accentColor}]}>
       <View style={styles.buttonPlacement}>
         {this._renderButton(() => this.setState({ visibleModal: null }))}
@@ -40,10 +41,10 @@ export default class Event extends Component {
         <Text>{this.props.description}</Text>
       </ScrollView>
       <View style={{ flexDirection: 'row'}}>
-        <TouchableOpacity style={styles.outButton}>
+        <TouchableOpacity style={styles.outButton} onPress={() => Linking.openURL(fburl)}>
           <Text style={{fontWeight: 'bold'}}>open in FB</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.outButton, {borderColor: grayedOut}]}>
+        <TouchableOpacity style={[styles.outButton, {borderColor: grayedOut}]} onPress={() => Linking.openURL(trailerurl)}>
           <Text style={{fontWeight: 'bold', color: grayedOut}}>Trailer</Text>
         </TouchableOpacity>
       </View>
@@ -63,7 +64,9 @@ export default class Event extends Component {
       accentColor = '#FFA49F'
       grayedOut = 'black'
     }
-    const url = "http://new.uclacec.com" + this.props.image.url;   // set url
+    const url = "http://uclacec.com" + this.props.image.url;   // set url
+    const fburl = this.props.fblink;
+    const trailerurl = this.props.trailerlink;
 
     // format date
     date = this.props.date;
@@ -101,7 +104,7 @@ export default class Event extends Component {
           </ImageBackground>
         </TouchableOpacity>
         <Modal isVisible={this.state.visibleModal === 1}>
-            {this._renderModalContent(accentColor)}
+            {this._renderModalContent(accentColor, fburl, trailerurl)}
         </Modal>
       </View>
     );
