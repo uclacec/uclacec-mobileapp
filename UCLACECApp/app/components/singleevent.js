@@ -4,26 +4,39 @@ import {
   StyleSheet,
   Text,
   View,
-  ImageBackground
+  ImageBackground,
+  TouchableOpacity,
+  ScrollView,
+  Linking
 } from 'react-native';
 import AddButton from './addbutton.js';
+import ModalView from './modalview.js';
+import Modal from 'react-native-modal';
 
 export default class Event extends Component {
   constructor(props) {
     super(props);
   }
 
+  state = {
+    visibleModal: null,
+  };
+
   render() {
-    // get accent color
+    
     let accentColor;
     if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
     } else if (this.props.type === 'speakers') {
       accentColor = '#CE4EC8'
-    } else {
+    } else if (this.props.type === 'films') {
       accentColor = '#FFA49F'
     }
-    const url = "http://new.uclacec.com" + this.props.image.url;   // set url
+    else {
+      accentColor = '#FFBE06'
+    }
+
+    const url = "http://uclacec.com" + this.props.image.url;   // set url
 
     // format date
     date = this.props.date;
@@ -38,23 +51,39 @@ export default class Event extends Component {
     });
 
     return (
-      <ImageBackground source={{"uri": url}} style={styles.image} >
-        <View style={styles.container}>
-          <View style={styles.textContainer}>
-            <Text style={styles.titleText}>{this.props.title}</Text>
-            <Text style={styles.detailsText}>{formatDate}</Text>
-            <Text style={styles.detailsText}>{this.props.location}</Text>
-          </View>
-          <AddButton
-            addOrDelete={this.props.addOrDelete}
-            handleOnClick={this.props.eventHandler}
-            type={this.props.type}/>
-          <View style={{flexDirection: 'column'}}>
-            <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
-            <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
-          </View>
-        </View>
-      </ImageBackground>
+      <View>
+        <TouchableOpacity 
+          onPress={ () => this.setState({ visibleModal: 1 })}
+        >
+          <ImageBackground source={{"uri": url}} style={styles.image} >
+            <View style={styles.container}>
+              <View style={styles.textContainer}>
+                <Text style={styles.titleText}>{this.props.title}</Text>
+                <Text style={styles.detailsText}>{formatDate}</Text>
+                <Text style={styles.detailsText}>{this.props.location}</Text>
+              </View>
+              <AddButton
+                addOrDelete={this.props.addOrDelete}
+                handleOnClick={this.props.eventHandler}
+                type={this.props.type}/>
+              <View style={{flexDirection: 'column'}}>
+                <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
+                <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
+              </View>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
+        <Modal isVisible={this.state.visibleModal === 1}>
+            <ModalView
+              title = {this.props.title}
+              type={this.props.type}
+              description = {this.props.description}
+              fblink = {this.props.fblink}
+              trailerlink = {this.props.trailerlink}
+              onClick={() => this.setState({ visibleModal: null })}
+            />
+        </Modal>
+      </View>
     );
   }
 }
@@ -64,10 +93,15 @@ const styles = StyleSheet.create({
     height: 148,
     width: 400
   },
+  detailsText: {
+    color: 'white',
+    fontSize: 15,
+    fontFamily: 'GTPressuraMonoTrial-Regular'
+  },
   container: {
     flexDirection: 'row',
     height: 148,
-    width: 375
+    width: 375,
   },
   textContainer: {
     padding: 15,
@@ -79,11 +113,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 28,
     fontFamily: 'GTPressuraMonoTrial-Bold'
-  },
-  detailsText: {
-    color: 'white',
-    fontSize: 15,
-    fontFamily: 'GTPressuraMonoTrial-Regular'
   },
   sideAccent: {
     height: 138,

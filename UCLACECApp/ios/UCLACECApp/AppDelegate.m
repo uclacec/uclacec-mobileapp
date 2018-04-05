@@ -25,7 +25,7 @@
   self.window.backgroundColor = [UIColor whiteColor];
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation launchOptions:launchOptions];
   
-  [SplashScreen show];
+  //[SplashScreen show];
   return YES;
 }
 

@@ -17,9 +17,12 @@ export default class Events extends Component {
           <Event
             type={item.event_type}
             title={item.title}
+            description={item.description}
             date={item.date}
             location={item.location}
             image={item.image}
+            fblink={item.fb_link}
+            trailerlink={item.trailer}
             eventHandler={
               this.props.addEvent ? () => this.props.addEvent({
                 event_type: item.event_type,

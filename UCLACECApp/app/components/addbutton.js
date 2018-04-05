@@ -14,8 +14,13 @@ export default class AddButton extends Component {
       accentColor = '#FF664D'
     } else if (this.props.type === 'speakers') {
       accentColor = '#CE4EC8'
-    } else {
+    } else if (this.props.type === 'films') {
       accentColor = '#FFA49F'
+      grayedOut = 'black'
+    }
+    else {
+      accentColor = '#FFBE06'
+      grayedOut = 'gray'
     }
 
     return (
