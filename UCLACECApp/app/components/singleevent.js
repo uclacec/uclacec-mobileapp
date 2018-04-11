@@ -67,7 +67,7 @@ export default class Event extends Component {
                 handleOnClick={this.props.eventHandler}
                 type={this.props.type}/>
               <View style={styles.sideContainer}>
-                <View style={{flexDirection: 'column'}}>
+                <View style={{flexDirection: 'column', flex: 1}}>
                   <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
                   <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
                 </View>
