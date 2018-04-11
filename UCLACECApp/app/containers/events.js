@@ -29,6 +29,7 @@ export default class Events extends Component {
                 title: item.title,
                 date: item.date,
                 location: item.location,
+                description: item.description,
                 image: item.image
               })
               : () => this.props.removeEvent({
