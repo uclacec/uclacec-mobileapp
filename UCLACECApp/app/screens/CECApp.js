@@ -17,6 +17,7 @@ import Events from '../containers/events.js';
 import Header from '../components/header.js';
 
 import SplashScreen from 'react-native-splash-screen';
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 class CECApp extends Component {
   componentDidMount() {
@@ -40,11 +41,14 @@ class CECApp extends Component {
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
-            <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer() }/>
-            <Events
-              data={this.props.visibility.events}
-              addEvent={(event) => this.props.addEventClick(event)}
-            />
+            <GestureRecognizer
+              onSwipeRight={() => this.toggleDrawer()}>
+              <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer() }/>
+              <Events
+                data={this.props.visibility.events}
+                addEvent={(event) => this.props.addEventClick(event)}
+              />
+            </GestureRecognizer>
           </View>
           <View style={{flex:1}}>
             <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
