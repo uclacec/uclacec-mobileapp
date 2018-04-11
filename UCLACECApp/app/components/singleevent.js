@@ -33,10 +33,13 @@ export default class Event extends Component {
     } else if (this.props.type === 'films') {
       accentColor = '#FFA49F'
     }
+<<<<<<< HEAD
     else {
       accentColor = '#FFBE06'
     }
 
+=======
+>>>>>>> refactored redux state but need to fix persist
     const url = "http://uclacec.com" + this.props.image.url;   // set url
 
     // format date

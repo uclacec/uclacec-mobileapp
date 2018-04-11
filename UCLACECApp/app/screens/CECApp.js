@@ -64,8 +64,8 @@ class CECApp extends Component {
 
 const mapStateToProps = state => {
   return {
-    myEvents: state.myEvents,
-    visibility: state.visibilityFilter
+    myEvents: state.events.myEvents,
+    visibility: state.events.visibilityFilter
   }
 }
 

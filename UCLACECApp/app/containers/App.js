@@ -24,13 +24,12 @@ import CECApp from '../screens/CECApp.js';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['myEvents']
 }
 
 // Persist store + reducer
-const persistedReducer = persistReducer(persistConfig, reducers);
-let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(persistedReducer);
-let persistor = persistStore(store);
+// const persistedReducer = persistReducer(persistConfig, reducers);
+let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(reducers);
+// let persistor = persistStore(store);
 
 // Configure navigation
 registerScreens(store, Provider);
