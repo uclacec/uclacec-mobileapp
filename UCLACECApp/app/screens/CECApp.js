@@ -38,24 +38,16 @@ class CECApp extends Component {
 
   render() {
 
-    const config = {
-      velocityThreshold: 0,
-      directionalOffsetThreshold: 100
-    };
-
     return (
       <View style={{flex: 1}}>
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View>
             <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer()} canFilter="true"/>
-            <GestureRecognizer
-              onSwipeRight={() => this.toggleDrawer()}>
               <Events
                 data={this.props.visibility.events}
                 addEvent={(event) => this.props.addEventClick(event)}
               />
-            </GestureRecognizer>
           </View>
           <View style={{flex:1}}>
             <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true} canFilter="false"/>
