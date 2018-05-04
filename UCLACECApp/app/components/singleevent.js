@@ -107,12 +107,15 @@ const styles = StyleSheet.create({
     padding: 15,
     justifyContent: 'flex-end',
     height: 150,
-    width: 366
+    width: 366,
   },
   titleText: {
     color: 'white',
     fontSize: 28,
-    fontFamily: 'GTPressuraMonoTrial-Bold'
+    fontFamily: 'GTPressuraMonoTrial-Bold',
+    textShadowColor:'#000000',
+    textShadowOffset:{width: 5, height: 5},
+    textShadowRadius:5,
   },
   sideAccent: {
     height: 138,

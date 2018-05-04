@@ -4,6 +4,7 @@ import {
   AsyncStorage,
   Text,
   View,
+  ScrollView,
   Button
 } from 'react-native';
 import { connect } from "react-redux";
@@ -36,14 +37,20 @@ class CECApp extends Component {
   };
 
   render() {
+
+    const config = {
+      velocityThreshold: 0,
+      directionalOffsetThreshold: 100
+    };
+
     return (
       <View style={{flex: 1}}>
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
-          <View style={{flex: 1}}>
+          <View>
+            <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer()} canFilter="true"/>
             <GestureRecognizer
               onSwipeRight={() => this.toggleDrawer()}>
-              <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer() }/>
               <Events
                 data={this.props.visibility.events}
                 addEvent={(event) => this.props.addEventClick(event)}
@@ -51,7 +58,7 @@ class CECApp extends Component {
             </GestureRecognizer>
           </View>
           <View style={{flex:1}}>
-            <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true}/>
+            <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true} canFilter="false"/>
             <Events
               data={this.props.myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}

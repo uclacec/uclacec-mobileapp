@@ -14,13 +14,25 @@ export default class Header extends Component {
   }
 
   render() {
+
+    const images = {
+      filter: require('../../assets/filter.png'),
+      logo: require('../../assets/ceclogo.jpeg'),
+    };
+
+    var img;
+    if (this.props.canFilter == 'true')
+      img = images.filter;
+    else 
+      img = images.logo;
+
     return (
       <View style={styles.header}>
         <TouchableOpacity
           disabled={this.props.disabled}
           onPress={ () => this.props.onClick()}
         >
-          <Image style={styles.logo} source={require('../../assets/ceclogo.jpeg')} />
+          <Image style={styles.logo} source={img} />
         </TouchableOpacity>
         <Text style={styles.text}> {this.props.titleText} </Text>
       </View>
@@ -46,8 +58,8 @@ const styles = StyleSheet.create({
     marginBottom: -15,
   },
   logo: {
-    height: 42,
-    width: 42,
-    borderRadius: 10
+    height: 30,
+    width: 30,
+    marginBottom: 5
   }
 });
