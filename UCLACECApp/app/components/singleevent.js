@@ -66,9 +66,11 @@ export default class Event extends Component {
                 addOrDelete={this.props.addOrDelete}
                 handleOnClick={this.props.eventHandler}
                 type={this.props.type}/>
-              <View style={{flexDirection: 'column'}}>
-                <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
-                <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
+              <View style={styles.sideContainer}>
+                <View style={{flexDirection: 'column', flex: 1}}>
+                  <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
+                  <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
+                </View>
               </View>
             </View>
           </ImageBackground>
@@ -91,7 +93,7 @@ export default class Event extends Component {
 const styles = StyleSheet.create({
   image: {
     height: 148,
-    width: 400
+    flex: 1
   },
   detailsText: {
     color: 'white',
@@ -100,8 +102,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flexDirection: 'row',
+    flex: 1,
     height: 148,
-    width: 375,
   },
   textContainer: {
     padding: 15,
@@ -116,6 +118,13 @@ const styles = StyleSheet.create({
     textShadowColor:'#000000',
     textShadowOffset:{width: 5, height: 5},
     textShadowRadius:5,
+  },
+  sideContainer: {
+    position: 'absolute',
+    right: 0,
+    height: 138,
+    width: 10,
+    justifyContent: 'flex-end',
   },
   sideAccent: {
     height: 138,
