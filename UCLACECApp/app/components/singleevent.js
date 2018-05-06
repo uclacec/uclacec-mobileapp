@@ -12,6 +12,7 @@ import {
 import AddButton from './addbutton.js';
 import ModalView from './modalview.js';
 import Modal from 'react-native-modal';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class Event extends Component {
   constructor(props) {
@@ -57,20 +58,21 @@ export default class Event extends Component {
         >
           <ImageBackground source={{"uri": url}} style={styles.image} >
             <View style={styles.container}>
-              <View style={styles.textContainer}>
-                <Text style={styles.titleText}>{this.props.title}</Text>
-                <Text style={styles.detailsText}>{formatDate}</Text>
-                <Text style={styles.detailsText}>{this.props.location}</Text>
-              </View>
+                <LinearGradient 
+                  colors={['white', 'rgba(255, 255, 255, 0.75)', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.25)', 'rgba(0, 0, 0, 0)']}
+                  start={{x: 0.5}} end={{x: 1}}
+                  locations={[0.5,0.6,0.7,0.8,1]}
+                  style={styles.linearGradient}>
+                  <Text style={styles.titleText}>{this.props.title}</Text>
+                  <Text style={styles.detailsText}>{formatDate}</Text>
+                </LinearGradient>
               <AddButton
                 addOrDelete={this.props.addOrDelete}
                 handleOnClick={this.props.eventHandler}
                 type={this.props.type}/>
               <View style={styles.sideContainer}>
-                <View style={{flexDirection: 'column', flex: 1}}>
                   <View style={[styles.sideAccent, {backgroundColor: accentColor}]} ></View>
                   <View style={[styles.sideAccentCorner, {borderTopColor: accentColor}]}></View>
-                </View>
               </View>
             </View>
           </ImageBackground>
@@ -93,38 +95,33 @@ export default class Event extends Component {
 const styles = StyleSheet.create({
   image: {
     height: 148,
-    flex: 1
   },
   detailsText: {
-    color: 'white',
+    color: 'black',
     fontSize: 15,
-    fontFamily: 'GTPressuraMonoTrial-Regular'
+    fontFamily: 'Bebas Neue'
   },
   container: {
     flexDirection: 'row',
     flex: 1,
     height: 148,
+    alignItems: 'flex-end',
   },
-  textContainer: {
-    padding: 15,
-    justifyContent: 'flex-end',
-    height: 150,
-    width: 366,
-  },
+
   titleText: {
-    color: 'white',
-    fontSize: 28,
-    fontFamily: 'GTPressuraMonoTrial-Bold',
-    textShadowColor:'#000000',
-    textShadowOffset:{width: 5, height: 5},
-    textShadowRadius:5,
+    color: 'black',
+    fontSize: 20,
+    fontFamily: 'Bebas Neue'
   },
   sideContainer: {
     position: 'absolute',
     right: 0,
-    height: 138,
+    top: 0,
+    height: 148,
     width: 10,
-    justifyContent: 'flex-end',
+    flexDirection: 'column', 
+    flex: 1,
+    justifyContent: 'flex-end'
   },
   sideAccent: {
     height: 138,
@@ -141,5 +138,12 @@ const styles = StyleSheet.create({
     transform: [
      {rotate: '90deg'}
    ]
+  },
+  linearGradient: {
+    padding: 4,
+    justifyContent: 'flex-start',
+    height: 50,
+    width: 250,
+    paddingLeft: 10
   }
 });
