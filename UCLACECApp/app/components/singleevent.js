@@ -80,6 +80,7 @@ export default class Event extends Component {
         <Modal isVisible={this.state.visibleModal === 1}>
             <ModalView
               title = {this.props.title}
+              location = {this.props.location}
               type={this.props.type}
               description = {this.props.description}
               fblink = {this.props.fblink}
