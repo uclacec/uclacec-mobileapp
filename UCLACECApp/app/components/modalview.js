@@ -54,6 +54,8 @@ export default class ModalView extends Component {
 
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>{this.props.title}</Text>
+          <Text style={styles.detailsText}>{formatDate}</Text>
+          <Text style={styles.detailsText}>{this.props.location}</Text>
         </View>
 
         <ScrollView style={{ marginBottom: 10, height: 200}}>
@@ -111,6 +113,12 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 28,
     fontFamily: 'GTPressuraMonoTrial-Bold'
+  },
+  detailsText: {
+    color: 'black',
+    fontSize: 19,
+    fontFamily: 'GTPressuraMonoTrial-Bold',
+    fontWeight: 'normal'
   },
   linkButton: {
     flex: 1,
