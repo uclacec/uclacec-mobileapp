@@ -67,6 +67,7 @@ export default class Event extends Component {
                   <Text style={styles.detailsText}>{formatDate}</Text>
                 </LinearGradient>
               <AddButton
+                disable={this.props.disable}
                 addOrDelete={this.props.addOrDelete}
                 handleOnClick={this.props.eventHandler}
                 type={this.props.type}/>
