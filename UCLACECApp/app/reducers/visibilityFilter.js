@@ -1,31 +1,11 @@
 import * as types from '../actions/types.js';
 
-const initialState = {
-  filter: "EVENTS",
-  events: []
-}
+const initialState = "EVENTS"
 
 const visibilityFilter = (state = initialState, action) => {
   switch (action.type) {
-    case types.SET_EVENTS:
-      return Object.assign({ filter: "EVENTS" }, { events: action.events });
     case types.SET_VISIBILITY_FILTER:
-    switch (action.filter) {
-      case 'CONCERTS':
-        let concerts = action.events.filter((event) => (event.event_type == 'concerts'));
-        return Object.assign({ filter: "CONCERTS" }, { events: concerts });
-      case 'SPEAKERS':
-        let speakers = action.events.filter((event) => (event.event_type == 'speakers'));
-        return Object.assign({ filter: "SPEAKERS" }, { events: speakers });
-      case 'FILMS':
-        let films = action.events.filter((event) => (event.event_type == 'films'));
-        return Object.assign({ filter: "FILMS" }, { events: films });;
-      case 'EVENTS':
-        return Object.assign({ filter: "EVENTS" }, { events: action.events });
-
-      default:
-        return state;
-    }
+      return action.filter;
     default:
       return state;
   }

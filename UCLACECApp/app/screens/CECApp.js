@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  AsyncStorage,
-  Text,
-  View,
-  ScrollView,
-  Button
-} from 'react-native';
+import { View } from 'react-native';
 import { connect } from "react-redux";
 import { addEvent } from '../actions/index.js';
 import { removeEvent } from '../actions/index.js';
@@ -26,33 +19,54 @@ class CECApp extends Component {
   }
 
   toggleDrawer = () => {
-        this.props.navigator.toggleDrawer({
-            side: 'left',
-            animated: true
-        });
+    this.props.navigator.toggleDrawer({
+      side: 'left',
+      animated: true
+    });
   };
 
-  static navigatorStyle = {
-    navBarHidden: true
-  };
+  static navigatorStyle = { navBarHidden: true };
 
   render() {
+    var events;
+    var myEvents = [];
+    if (this.props.events) {
+      // Add "inMyEvents" key for each item
+      this.props.events.map(e => Object.assign(e, { inMyEvents: this.props.myEvents.includes(e._id) }));
+
+      // Filter events for main screen
+      if (this.props.filter === "EVENTS") {
+        events = this.props.events;
+      }
+      else {
+        events = this.props.events.filter((event) => (
+          event.event_type === this.props.filter.toLowerCase()
+        ));
+      }
+
+      // Filter events for My Events
+      this.props.myEvents.forEach((item) => {
+        var myEvent = this.props.events.find(event => event._id === item);
+        myEvents.push(myEvent);
+      });
+    }
 
     return (
       <View style={{flex: 1}}>
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
-          <View>
-            <Header titleText={this.props.visibility.filter} onClick={()=>this.toggleDrawer()} canFilter="true"/>
-              <Events
-                data={this.props.visibility.events}
-                addEvent={(event) => this.props.addEventClick(event)}
-              />
+          <View style={{flex: 1}}>
+            <Header titleText={this.props.filter} onClick={() => this.toggleDrawer()}/>
+            <Events
+              data={events}
+              myEvents={this.props.myEvents}
+              addEvent={(event) => this.props.addEventClick(event)}
+            />
           </View>
           <View style={{flex:1}}>
-            <Header titleText="MY EVENTS" onClick={()=>{}} disabled={true} canFilter="false"/>
+            <Header titleText="MY EVENTS" onClick={() => {}} disabled={true}/>
             <Events
-              data={this.props.myEvents}
+              data={myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}
             />
           </View>
@@ -64,15 +78,16 @@ class CECApp extends Component {
 
 const mapStateToProps = state => {
   return {
-    myEvents: state.events.myEvents,
-    visibility: state.events.visibilityFilter
+    events: state.events,
+    filter: state.visibilityFilter,
+    myEvents: state.myEvents
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     addEventClick: (event) => dispatch(addEvent(event)),
-    deleteEventClick: (event) => dispatch(removeEvent(event)),
+    deleteEventClick: (event) => dispatch(removeEvent(event))
   }
 }
 

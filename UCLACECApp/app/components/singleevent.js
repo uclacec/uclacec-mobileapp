@@ -24,7 +24,7 @@ export default class Event extends Component {
   };
 
   render() {
-    
+
     let accentColor;
     if (this.props.type === 'concerts') {
       accentColor = '#FF664D'
@@ -33,13 +33,10 @@ export default class Event extends Component {
     } else if (this.props.type === 'films') {
       accentColor = '#FFA49F'
     }
-<<<<<<< HEAD
     else {
       accentColor = '#FFBE06'
     }
 
-=======
->>>>>>> refactored redux state but need to fix persist
     const url = "http://uclacec.com" + this.props.image.url;   // set url
 
     // format date
@@ -56,12 +53,12 @@ export default class Event extends Component {
 
     return (
       <View>
-        <TouchableOpacity 
+        <TouchableOpacity
           onPress={ () => this.setState({ visibleModal: 1 })}
         >
           <ImageBackground source={{"uri": url}} style={styles.image} >
             <View style={styles.container}>
-                <LinearGradient 
+                <LinearGradient
                   colors={['white', 'rgba(255, 255, 255, 0.75)', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.25)', 'rgba(0, 0, 0, 0)']}
                   start={{x: 0.5}} end={{x: 1}}
                   locations={[0.5,0.6,0.7,0.8,1]}
@@ -123,7 +120,7 @@ const styles = StyleSheet.create({
     top: 0,
     height: 148,
     width: 10,
-    flexDirection: 'column', 
+    flexDirection: 'column',
     flex: 1,
     justifyContent: 'flex-end'
   },

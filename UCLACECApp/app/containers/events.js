@@ -13,8 +13,10 @@ export default class Events extends Component {
     return (
       <FlatList
         data={this.props.data}
+        extraData={this.props.myEvents}
         renderItem={({item}) => (
           <Event
+            id={item._id}
             type={item.event_type}
             title={item.title}
             description={item.description}
@@ -23,23 +25,25 @@ export default class Events extends Component {
             image={item.image}
             fblink={item.fb_link}
             trailerlink={item.trailer}
-            eventHandler={
-              this.props.addEvent ? () => this.props.addEvent({
-                event_type: item.event_type,
-                title: item.title,
-                date: item.date,
-                location: item.location,
-                description: item.description,
-                image: item.image
-              })
-              : () => this.props.removeEvent({
-                title: item.title
-              })
+            disable={
+              this.props.addEvent
+              ? item.inMyEvents
+              : false
             }
-            addOrDelete={ this.props.addEvent ? "+" : "x" }
+            eventHandler={
+              this.props.addEvent
+              ? () => this.props.addEvent(item._id)
+              : () => this.props.removeEvent(item._id)
+            }
+            addOrDelete={ this.props.addEvent
+              ? item.inMyEvents
+                ? "✓"
+                : "+"
+              : "x"
+            }
           />
         )}
-        keyExtractor={item => item.title}
+        keyExtractor={item => item._id}
       />
     );
   }
