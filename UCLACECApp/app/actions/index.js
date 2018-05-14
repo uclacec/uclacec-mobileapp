@@ -1,10 +1,10 @@
 import * as types from './types.js';
 import fetch from 'cross-fetch';
 
-export function addEvent(event) {
+export function addEvent(eventID) {
   return {
     type: types.ADD_EVENT,
-    event
+    eventID
   };
 }
 

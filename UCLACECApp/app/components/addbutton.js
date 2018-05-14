@@ -24,8 +24,11 @@ export default class AddButton extends Component {
     }
 
     return (
-      <TouchableOpacity style={styles.button} onPress={this.props.handleOnClick}>
-        <View onClick={this.handleClick}>
+      <TouchableOpacity
+        disabled={this.props.disable}
+        style={[styles.button, this.props.disable ? styles.disabled : styles.enabled]}
+        onPress={this.props.handleOnClick}>
+        <View style={this.props.disable ? styles.disabledText : styles.enabledText} onClick={this.handleClick}>
           <Text style={[styles.text, {color: accentColor}]}>{this.props.addOrDelete}</Text>
         </View>
       </TouchableOpacity>
@@ -43,7 +46,18 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  disabled: {
+    backgroundColor: 'rgba(252, 251, 252, 0.7)'
+  },
+  enabled: {
     backgroundColor: 'white'
+  },
+  disabledText: {
+    opacity: 0.8
+  },
+  enabledText: {
+    opacity: 1
   },
   text: {
     fontSize: 20,

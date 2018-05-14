@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 // Middlewares
 import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
-import { persistReducer, persistStore, purge } from 'redux-persist';
+import { persistReducer, persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage'
 
@@ -29,7 +29,7 @@ const persistConfig = {
 
 // Persist store + reducer
 const persistedReducer = persistReducer(persistConfig, reducers);
-let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(persistedReducer);
+let store = compose(applyMiddleware(thunkMiddleware, logger))(createStore)(persistedReducer);
 let persistor = persistStore(store);
 
 // Configure navigation

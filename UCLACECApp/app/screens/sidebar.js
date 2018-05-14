@@ -36,9 +36,9 @@ class SideBar extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    allEvents: state.loadEvents.events,
-    myEvents: state.myEvents,
-    visibility: state.visibilityFilter.events
+    allEvents: state.allEvents,
+    myEvents: state.allEvents,
+    visibility: state.allEvents
   }
 }
 
