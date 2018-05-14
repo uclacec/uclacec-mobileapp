@@ -30,7 +30,7 @@ class CECApp extends Component {
   render() {
     var events;
     var myEvents = [];
-    if (this.props.events) {
+    if (this.props.events.length !== 0) {
       // Add "inMyEvents" key for each item
       this.props.events.map(e => Object.assign(e, { inMyEvents: this.props.myEvents.includes(e._id) }));
 

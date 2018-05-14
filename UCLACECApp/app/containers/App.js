@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 // Middlewares
 import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
-import { persistReducer, persistStore, purge } from 'redux-persist';
+import { persistReducer, persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage'
 
@@ -24,12 +24,13 @@ import CECApp from '../screens/CECApp.js';
 const persistConfig = {
   key: 'root',
   storage,
+  whitelist: ['myEvents']
 }
 
 // Persist store + reducer
-// const persistedReducer = persistReducer(persistConfig, reducers);
-let store = compose(applyMiddleware(logger, thunkMiddleware))(createStore)(reducers);
-// let persistor = persistStore(store);
+const persistedReducer = persistReducer(persistConfig, reducers);
+let store = compose(applyMiddleware(thunkMiddleware, logger))(createStore)(persistedReducer);
+let persistor = persistStore(store);
 
 // Configure navigation
 registerScreens(store, Provider);
