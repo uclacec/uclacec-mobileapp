@@ -56,7 +56,7 @@ class CECApp extends Component {
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
-            <Header titleText={this.props.filter} onClick={() => this.toggleDrawer()}/>
+            <Header canFilter="true" titleText={this.props.filter} onClick={() => this.toggleDrawer()}/>
             <Events
               data={events}
               myEvents={this.props.myEvents}
@@ -64,7 +64,7 @@ class CECApp extends Component {
             />
           </View>
           <View style={{flex:1}}>
-            <Header titleText="MY EVENTS" onClick={() => {}} disabled={true}/>
+            <Header canFilter="false" titleText="MY EVENTS" onClick={() => {}} disabled={true}/>
             <Events
               data={myEvents}
               removeEvent={(event) => this.props.deleteEventClick(event)}
