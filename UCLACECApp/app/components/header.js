@@ -4,13 +4,20 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 
+const IPHONE_X_HEIGHT = 812;
 
 export default class Header extends Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.state = {
+      height: Dimensions.get('window').height,
+    };
+    this.headerHeight = this.state.height === IPHONE_X_HEIGHT ? 95 : 75;
+
   }
 
   render() {
@@ -27,7 +34,7 @@ export default class Header extends Component {
       img = images.logo;
 
     return (
-      <View style={styles.header}>
+      <View style={[styles.header, {height: this.headerHeight}]}>
         <TouchableOpacity
           disabled={this.props.disabled}
           onPress={ () => this.props.onClick()}
@@ -47,7 +54,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     padding: 10,
     paddingLeft: 14,
-    height: 75,
     backgroundColor: '#FFFFFF',
   },
   text: {

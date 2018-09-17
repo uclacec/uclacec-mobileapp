@@ -17,6 +17,7 @@ export default class Events extends Component {
         renderItem={({item}) => (
           <Event
             id={item._id}
+            time={item.time}
             type={item.event_type}
             title={item.title}
             description={item.description}

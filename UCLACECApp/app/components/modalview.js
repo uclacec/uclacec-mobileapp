@@ -67,7 +67,7 @@ export default class ModalView extends Component {
             style={[styles.linkButton, {borderColor: fbColor}]} 
             onPress={() => Linking.openURL(this.props.fblink)}
             disabled={!hasFbLink}>
-            <Text style={{fontWeight: 'bold', color: fbColor}}>open in FB</Text>
+            <Text style={{fontWeight: 'bold', color: fbColor}}>Open in FB</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={[styles.linkButton, {borderColor: trailerColor}]} 
