@@ -18,7 +18,8 @@ import { Navigation } from 'react-native-navigation';
 import registerScreens from '../screens';
 
 import CECApp from '../screens/CECApp.js';
-
+import Loading from '../screens/Loading';
+import SplashScreen from "react-native-splash-screen";
 
 // Configure persist
 const persistConfig = {
@@ -37,7 +38,7 @@ registerScreens(store, Provider);
 
 Navigation.startSingleScreenApp({
     screen: {
-        screen: 'cecapp'
+        screen: 'loading'
     },
     drawer: {
       left: {
@@ -64,7 +65,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <CECApp />
+          <Loading />
         </PersistGate>
       </Provider>
     );

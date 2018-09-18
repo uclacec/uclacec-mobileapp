@@ -14,9 +14,6 @@ import SplashScreen from 'react-native-splash-screen';
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 class CECApp extends Component {
-  componentDidMount() {
-    SplashScreen.hide();
-  }
 
   toggleDrawer = () => {
     this.props.navigator.toggleDrawer({

@@ -26,6 +26,10 @@ export default class Event extends Component {
     this.infoBoxHeight = this.state.height === IPHONE_X_HEIGHT ? 70 : 50;
   }
 
+  handleImageLoaded() {
+    console.log('IMAGE LOADED')
+  }
+
   render() {
 
     let accentColor;
@@ -56,7 +60,7 @@ export default class Event extends Component {
         <TouchableOpacity
           onPress={ () => this.setState({ visibleModal: 1 })}
         >
-          <ImageBackground source={{"uri": url}} style={{height: this.containerHeight}} >
+          <ImageBackground onLoad={this.handleImageLoaded.bind(this)} source={{"uri": url}} style={{height: this.containerHeight}} >
             <View style={[styles.container, {height: this.containerHeight}]}>
                 <LinearGradient
                   colors={['white', 'rgba(255, 255, 255, 0.75)', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.25)', 'rgba(0, 0, 0, 0)']}
