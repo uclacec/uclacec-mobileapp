@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-  View,
   Animated,
   Easing,
   StyleSheet
@@ -15,7 +14,13 @@ export default class Loading extends Component {
   constructor() {
     super();
 
-    this.yVal = new Animated.Value(0)
+    this.yVal = new Animated.Value(0);
+    this.opacity = new Animated.Value(1);
+    this.stopBounce = false;
+
+    this.state = {
+      show: true,
+    };
   }
 
   handleImageLoaded() {
@@ -36,36 +41,79 @@ export default class Loading extends Component {
     this.yVal.setValue(0);
     Animated.sequence([
       Animated.timing(
-        this.yVal,
-        {
+        this.yVal, {
           toValue: 1,
           duration: 1000,
           easing: Easing.bounce,
         }
       ),
       Animated.timing(
-        this.yVal,
-        {
+        this.yVal, {
           toValue: 0,
           duration: 300,
           easing: Easing.quad,
         }
       )
-    ]).start(() => this.bounce())
+    ]).start(() => {
+      if (!this.stopBounce)
+        this.bounce();
+    });
+  }
+
+  componentWillReceiveProps(newProps) {
+    /*
+     * If new component should unmount, this starts the unmount animation.
+     */
+    if (!newProps.mounted) {
+      this.stopBounce = true;
+      this.unMountAnimation();
+    }
+  }
+
+  unMountAnimation() {
+    Animated.sequence([
+      Animated.timing(
+        this.yVal, {
+          delay: 300,
+          toValue: -1,
+          duration: 200,
+          easing: Easing.linear,
+        }
+      ),
+      Animated.timing(
+        this.opacity,
+        {
+          delay: 500,
+          toValue: 0,
+          duration: 500,
+          easing: Easing.linear,
+        }
+      )
+    ]).start(() => this.transitionEnd())
+  }
+
+  transitionEnd() {
+    /*
+     * After the transition is over, set state to show : false to un-render
+     * the component and allow main app components to be interacted with.
+     */
+    this.setState({show: false});
   }
 
   render() {
     const y = this.yVal.interpolate({
-      inputRange: [0, 1],
-      outputRange: [0, 30]
+      inputRange: [-1, 0, 1],
+      outputRange: [-400, 0, 30]
     });
 
     return (
-      <View style={styles.container}>
+      this.state.show &&
+      <Animated.View style={[styles.container, {opacity: this.opacity}]}>
         <Animated.Image style={[styles.img, {transform: [{'translateY': y}]}]}
                         source={require('../../assets/cec_loading.png')}
                         onLoad={this.handleImageLoaded.bind(this)}/>
-      </View>
+      </Animated.View>
+
     );
   }
 }

@@ -24,6 +24,10 @@ export default function loadEvents(state = initialState, action) {
       newState.push(action.image);
       return Object.assign({}, state, {
         imagesLoaded: {
+          /*
+           * TODO: Make this check for at least the first 8 or so images loaded,
+           * currently just checks with an arbitrary number.
+           */
           allLoaded: newState.length > 10,
           imageIds: newState,
         }

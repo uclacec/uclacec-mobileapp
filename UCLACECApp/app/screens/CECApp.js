@@ -48,11 +48,7 @@ class CECApp extends Component {
 
     return (
       <View style={{flex: 1}}>
-        {
-          this.props.loaded
-          ? null
-          : <Loading />
-        }
+        <Loading mounted={!this.props.loaded}/>
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
