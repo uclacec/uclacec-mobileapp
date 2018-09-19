@@ -23,7 +23,7 @@ export default class Event extends Component {
       visibleModal: null,
     };
     this.containerHeight = this.state.height === IPHONE_X_HEIGHT ? 180 : 148;
-    this.infoBoxHeight = this.state.height === IPHONE_X_HEIGHT ? 70 : 50;
+    this.infoBoxHeight = this.state.height === IPHONE_X_HEIGHT ? 55 : 50;
   }
 
   render() {

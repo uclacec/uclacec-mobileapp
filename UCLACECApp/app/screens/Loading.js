@@ -45,6 +45,7 @@ export default class Loading extends Component {
           toValue: 1,
           duration: 1000,
           easing: Easing.bounce,
+          useNativeDriver: true,
         }
       ),
       Animated.timing(
@@ -52,6 +53,7 @@ export default class Loading extends Component {
           toValue: 0,
           duration: 300,
           easing: Easing.quad,
+          useNativeDriver: true,
         }
       )
     ]).start(() => {
@@ -78,6 +80,7 @@ export default class Loading extends Component {
           toValue: -1,
           duration: 200,
           easing: Easing.linear,
+          useNativeDriver: true,
         }
       ),
       Animated.timing(
@@ -87,6 +90,7 @@ export default class Loading extends Component {
           toValue: 0,
           duration: 500,
           easing: Easing.linear,
+          useNativeDriver: true,
         }
       )
     ]).start(() => this.transitionEnd())
