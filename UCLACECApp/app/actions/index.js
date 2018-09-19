@@ -1,26 +1,26 @@
 import * as types from './types.js';
 import fetch from 'cross-fetch';
 
-export function addEvent(eventID) {
+export const addEvent = eventID => {
   return {
     type: types.ADD_EVENT,
     eventID
   };
-}
+};
 
-export function removeEvent(event) {
+export const removeEvent = event => {
   return {
     type: types.REMOVE_EVENT,
     event
   };
-}
+};
 
 export const setEvents = events => {
   return {
     type: types.SET_EVENTS,
     events
   };
-}
+};
 
 export const setVisibilityFilter = (filter, events) => {
   return {
@@ -28,13 +28,13 @@ export const setVisibilityFilter = (filter, events) => {
     filter,
     events
   };
-}
+};
 
 export const requestData = () => {
   return {
     type: types.REQUEST_DATA,
   };
-}
+};
  
 export const receiveData = (data) => {
   return {
@@ -42,7 +42,7 @@ export const receiveData = (data) => {
     receivedAt: Date.now(),
     data
   };
-}
+};
 
 export const fetchData = () => {
   return (dispatch) => {
@@ -54,4 +54,11 @@ export const fetchData = () => {
       dispatch(setEvents(events));
     });
   }
-}
+};
+
+export const imageLoaded = (image) => {
+  return {
+    type: types.IMAGE_LOADED,
+    image,
+  };
+};

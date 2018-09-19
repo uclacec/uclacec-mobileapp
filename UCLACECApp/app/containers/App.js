@@ -38,7 +38,7 @@ registerScreens(store, Provider);
 
 Navigation.startSingleScreenApp({
     screen: {
-        screen: 'loading'
+        screen: 'cecapp'
     },
     drawer: {
       left: {
@@ -65,7 +65,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Loading />
+          <CECApp />
         </PersistGate>
       </Provider>
     );

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
   FlatList
 } from 'react-native';
-import Event from '../components/singleevent.js';
+import {connect} from 'react-redux';
 
-export default class Events extends Component {
+import Event from '../components/singleevent.js';
+import {imageLoaded} from '../actions/index';
+
+class Events extends Component {
   render() {
     return (
       <FlatList
@@ -42,6 +41,7 @@ export default class Events extends Component {
                 : "+"
               : "x"
             }
+            imageLoaded={() => this.props.imageLoaded(item._id)}
           />
         )}
         keyExtractor={item => item._id}
@@ -49,3 +49,15 @@ export default class Events extends Component {
     );
   }
 }
+
+const mapStateToProps = () => {
+  return { };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    imageLoaded: (img) => dispatch(imageLoaded(img)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Events)

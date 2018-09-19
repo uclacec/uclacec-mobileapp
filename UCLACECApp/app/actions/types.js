@@ -4,3 +4,4 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 export const REQUEST_DATA = 'REQUEST_DATA';
 export const RECEIVE_DATA = 'RECEIVE_DATA';
 export const SET_EVENTS = 'SET_EVENTS';
+export const IMAGE_LOADED = 'IMAGE_LOADED';

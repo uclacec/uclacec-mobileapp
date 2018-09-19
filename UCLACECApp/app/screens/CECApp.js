@@ -9,9 +9,7 @@ import Swiper from 'react-native-swiper';
 
 import Events from '../containers/events.js';
 import Header from '../components/header.js';
-
-import SplashScreen from 'react-native-splash-screen';
-import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+import Loading from '../screens/Loading';
 
 class CECApp extends Component {
 
@@ -50,6 +48,11 @@ class CECApp extends Component {
 
     return (
       <View style={{flex: 1}}>
+        {
+          this.props.loaded
+          ? null
+          : <Loading />
+        }
         <Swiper
           showsButtons={false} loop={false} showsPagination={false} >
           <View style={{flex: 1}}>
@@ -77,16 +80,17 @@ const mapStateToProps = state => {
   return {
     events: state.events,
     filter: state.visibilityFilter,
-    myEvents: state.myEvents
-  }
-}
+    myEvents: state.myEvents,
+    loaded: state.loadEvents.imagesLoaded.allLoaded,
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     addEventClick: (event) => dispatch(addEvent(event)),
     deleteEventClick: (event) => dispatch(removeEvent(event))
-  }
-}
+  };
+};
 
 export default CECApp = connect(
   mapStateToProps,

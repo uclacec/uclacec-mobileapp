@@ -19,11 +19,17 @@ export default class Loading extends Component {
   }
 
   handleImageLoaded() {
+    /*
+     * When CEC image loads, hide the splash screen
+     */
     SplashScreen.hide();
   }
 
   componentDidMount() {
-    this.bounce()
+    /*
+     * Starts animating CEC logo
+     */
+    this.bounce();
   }
 
   bounce() {
@@ -67,7 +73,11 @@ export default class Loading extends Component {
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
+    position: 'absolute',
+    zIndex: 1,
     flex: 1,
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFBE06',
