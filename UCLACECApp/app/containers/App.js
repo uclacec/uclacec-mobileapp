@@ -10,8 +10,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage'
 
 // Reducers and actions
-import { fetchData } from '../actions/index.js';
-import reducers from '../reducers/index.js';
+import { fetchData } from '../api/redux/actions/index.js';
+import reducers from '../api/redux/reducers/index.js';
 
 // Navigation
 import { Navigation } from 'react-native-navigation';

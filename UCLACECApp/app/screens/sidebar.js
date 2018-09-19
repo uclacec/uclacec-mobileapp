@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../actions/index.js';
+import { setVisibilityFilter } from '../api/redux/actions/index.js';
 
 class SideBar extends React.Component {
 

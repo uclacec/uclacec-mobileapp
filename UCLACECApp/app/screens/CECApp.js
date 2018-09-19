@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { connect } from "react-redux";
-import { addEvent } from '../actions/index.js';
-import { removeEvent } from '../actions/index.js';
+import { addEvent } from '../api/redux/actions/index.js';
+import { removeEvent } from '../api/redux/actions/index.js';
 
 import { StackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';

@@ -5,7 +5,7 @@ import {
 import {connect} from 'react-redux';
 
 import Event from '../components/singleevent.js';
-import {imageLoaded} from '../actions/index';
+import {imageLoaded} from '../api/redux/actions/index';
 
 class Events extends Component {
   render() {
