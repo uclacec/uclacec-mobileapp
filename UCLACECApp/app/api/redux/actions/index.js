@@ -1,4 +1,5 @@
 import * as types from './types.js';
+import * as pushNotifActions from '../../handlers/pushNotifs';
 import fetch from 'cross-fetch';
 
 export const addEvent = eventID => {
@@ -8,10 +9,10 @@ export const addEvent = eventID => {
   };
 };
 
-export const removeEvent = event => {
+export const removeEvent = eventID => {
   return {
     type: types.REMOVE_EVENT,
-    event
+    eventID
   };
 };
 
@@ -22,11 +23,30 @@ export const setEvents = events => {
   };
 };
 
-export const setVisibilityFilter = (filter, events) => {
+export const setVisibilityFilterAction = (filter, events) => {
   return {
     type: types.SET_VISIBILITY_FILTER,
     filter,
     events
+  };
+};
+
+export const setVisibilityFilter = (filter, events) => {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      try {
+        dispatch(setVisibilityFilterAction(filter, events));
+        resolve();
+      } catch(e) {
+        reject(e);
+      }
+    })
+      .then(() => {
+        dispatch(clearLoadedImages());
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 };
 
@@ -61,4 +81,49 @@ export const imageLoaded = (image) => {
     type: types.IMAGE_LOADED,
     image,
   };
+};
+
+export const clearLoadedImages = () => {
+  return {
+    type: types.CLEAR_LOADED_IMAGES,
+  };
+};
+
+
+export const registerEvent = (event) => {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      try {
+        dispatch(addEvent(event));
+        resolve(event);
+      } catch(e) {
+        reject(e);
+      }
+    })
+      .then((event) => {
+        pushNotifActions.createPushNotif(event);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+};
+
+export const unregisterEvent = (event) => {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      try {
+        dispatch(removeEvent(event));
+        resolve(event);
+      } catch(e) {
+        reject(e);
+      }
+    })
+      .then((event) => {
+        pushNotifActions.deletePushNotif(event);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
 };

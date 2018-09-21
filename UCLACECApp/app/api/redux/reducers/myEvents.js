@@ -21,7 +21,7 @@ export default function myEvents(state = initialState, action) {
       }
 
     case types.REMOVE_EVENT:
-      const index = state.findIndex(x => x === action.event);
+      const index = state.findIndex(x => x === action.eventID);
       var newState = [
         ...state.slice(0, index),
         ...state.slice(index + 1)

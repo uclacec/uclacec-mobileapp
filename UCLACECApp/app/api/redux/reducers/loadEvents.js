@@ -32,6 +32,14 @@ export default function loadEvents(state = initialState, action) {
           imageIds: newState,
         }
       });
+
+    case types.CLEAR_LOADED_IMAGES:
+      return Object.assign({}, state, {
+        imagesLoaded: {
+          allLoaded: state.imagesLoaded.allLoaded,
+          imageIds: [],
+        }
+      });
     default:
       return state;
   }

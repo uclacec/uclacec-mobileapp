@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { connect } from "react-redux";
-import { addEvent } from '../api/redux/actions/index.js';
-import { removeEvent } from '../api/redux/actions/index.js';
+import {registerEvent, unregisterEvent} from '../api/redux/actions';
 
-import { StackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
 import Events from '../containers/events.js';
@@ -83,8 +81,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addEventClick: (event) => dispatch(addEvent(event)),
-    deleteEventClick: (event) => dispatch(removeEvent(event))
+    addEventClick: (event) => dispatch(registerEvent(event)),
+    deleteEventClick: (event) => dispatch(unregisterEvent(event))
   };
 };
 
